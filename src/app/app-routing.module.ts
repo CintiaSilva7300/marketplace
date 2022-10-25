@@ -3,6 +3,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarinhoComponent } from './components/carinho/carinho.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+
+  {
+    path: 'carinho',
+    component: CarinhoComponent,
   },
 
   {

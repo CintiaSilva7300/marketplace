@@ -19,6 +19,7 @@ import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { CarinhoComponent } from './components/carinho/carinho.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     LoginComponent,
     HomeComponent,
+    CarinhoComponent,
   ],
   imports: [
     BrowserModule,
