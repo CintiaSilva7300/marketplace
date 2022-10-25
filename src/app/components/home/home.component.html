@@ -1,10 +1,26 @@
 <nav class="navbar" style="display: flex; display: inline-flex;">
-  <h2>Marketplace</h2>
+  <h2 class="Textmarketplace"><a href="/" style="text-decoration: none; color:white ;">Marketplace</a> </h2>
 
-  <select class="form-select" aria-label="Default select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
+  <div class="rotasNav">
+    <button class="btn btn-danger" [routerLink]="['/login']" routerLinkActive="router-link-active" >Entrar</button>
+    <a class="btn btn-danger" [routerLink]="['/cadastrar']" routerLinkActive="router-link-active" >Cadastrar</a>
+  </div>
 </nav>
+
+<div class="container" *ngFor="let produto of produtos">
+  <div class="row">
+    <div class="">
+      <div class="card">
+        <img [src]="produto.img"/>
+        <div class="card__content">
+          <h4>{{ produto.name }}</h4>
+          <p>
+             {{ produto.description }} | <br>|{{ produto.valor}}$|
+          </p>
+          <a href="carinho">Adicionar/Carinho</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

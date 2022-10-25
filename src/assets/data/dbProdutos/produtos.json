@@ -1,0 +1,91 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA AMD, VERMELHA, PG-OMG-AMD01",
+      "valor":1.900,
+      "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSXMtsFKB9eoLC3majuVeyGMkVpYYrLofG8zqiYOZ69M_MQNPfp_aZ4-Vur86ol-RN6hNfoDPiLsg&usqp=CAc"
+    },
+
+    {
+      "id": 2,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA AMD, PRETA, PG-OMG-AMD01",
+      "valor":5.799,
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS31Ezr9WpURjdqCX-aWh6utoFKowK1yOk3o9Wr6J8qaklqcEwqukU_iIciSHdPHjiHcOJsbTr9OQ&usqp=CAc"
+    },
+
+    {
+      "id": 3,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA AMD, VERMELHA, PG-OMG-AMD01",
+      "valor":3.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-amd012117.jpg"
+    },
+
+    {
+      "id": 4,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA, ROXA E DOURADA, PG-OMG-PRP01",
+      "valor":1.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-prp015.jpg"
+    },
+
+    {
+      "id": 5,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA, AZUL E DOURADA, PG-OMG-BLU01",
+      "valor":2.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-blu01.jpg"
+    },
+
+    {
+      "id": 6,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA AMD, PRETA, PG-OMG-AMD01",
+      "valor":2.800,
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS31Ezr9WpURjdqCX-aWh6utoFKowK1yOk3o9Wr6J8qaklqcEwqukU_iIciSHdPHjiHcOJsbTr9OQ&usqp=CAc"
+    },
+
+    {
+      "id": 7,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA AMD, VERMELHA, PG-OMG-AMD01",
+      "valor":10.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-amd012117.jpg"
+    },
+
+    {
+      "id": 8,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA, ROXA E DOURADA, PG-OMG-PRP01",
+      "valor":9.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-prp015.jpg"
+    },
+
+    {
+      "id": 9,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA, AZUL E DOURADA, PG-OMG-BLU01",
+      "valor":6.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-blu01.jpg"
+    },
+
+    {
+      "id": 10,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA, ROXA E DOURADA, PG-OMG-PRP01",
+      "valor":2.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-prp015.jpg"
+    },
+
+    {
+      "id": 11,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description":"CADEIRA GAMER PICHAU OMEGA, AZUL E DOURADA, PG-OMG-BLU01",
+      "valor":8.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-blu01.jpg"
+    }
+  ]
+}
