@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <div class="container">
   <div class="loginText">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check"
@@ -11,17 +13,19 @@
   </div>
   <p>Veja seus pedidos de forma fácil, compre mais <br>rápido e tenha uma experiência personalizada :)</p>
 
-  <form class="form">
+  <form class="form" [formGroup]="formulario" (ngSubmit)="login()">
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">e-mail:</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">senha na americanas: </label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1" class="form-label">senha da marketplace: </label>
+      <input type="password" class="form-control" id="exampleInputPassword1"
+      formControlName="password">
     </div>
 
     <button type="submit" class="btn">continuar</button>
+
     <div class="textFim">
       <p>não tem cadastro? <a href="cadastrar" style="text-decoration-color: #666666; color: #666666;">cadastre-se</a></p>
     </div>

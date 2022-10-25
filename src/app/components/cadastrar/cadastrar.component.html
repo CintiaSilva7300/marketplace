@@ -1,46 +1,50 @@
+<app-header></app-header>
+
 <div class="container">
   <div class="loginText">
     <h1>criar seu cadastro</h1>
   </div>
   <p>Veja seus pedidos de forma fácil, compre mais <br>rápido e tenha uma experiência personalizada :)</p>
 
-  <form class="form">
+  <form class="form" [formGroup]="formulario" (ngSubmit)="registration()">
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">Nome completo:</label>
-      <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="text">
+      <input type="name" class="form-control" aria-describedby="text"
+      formControlName="name"
+      >
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">
         Gênero:<p>pra gente te conhecer um pouquinho melhor :)</p></label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="genre">
     </div>
 
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">
         Data de nascimento:<p>
           necessário pra identificar a maioridade, no formato DD/MM/AAAA</p></label>
-      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="text">
+      <input type="date" class="form-control" aria-describedby="text" formControlName="birthday">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">CPF<p>necessário pra emissão das Notas Fiscais</p></label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control"  formControlName="cpf">
     </div>
 
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">
         Telefone: <p>caso a gente precise entrar em contato sobre seus pedidos</p></label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="telephone">
     </div>
 
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">e-mail: <p>Informe um e-mail válido. Você vai precisar ativar
           sua conta depois de criar seu cadastro</p></label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" class="form-control" aria-describedby="emailHelp"  formControlName="email">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">
         senha <p>precisa ter entre 6 e 20 caracteres</p></label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" class="form-control" id="exampleInputPassword1"  formControlName="password">
     </div>
 
     <div class="form-check">
@@ -52,6 +56,7 @@
     </div>
 
     <button type="submit" class="btn">continuar</button>
+
     <div class="textFim">
       <p>Não se preocupe, nosso site é seguro! Ao criar o seu cadastro,<br> você concorda com a nossa
         <strong>
