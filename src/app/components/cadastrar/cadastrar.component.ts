@@ -1,3 +1,4 @@
+import { UserCadastroService } from './../../services/user-cadastro.service';
 import { UserCadastro } from './../login/models/cadastro';
 import { Component, OnInit } from '@angular/core';
 import { Guid } from 'guid-typescript';
@@ -10,9 +11,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class CadastrarComponent implements OnInit {
   userCadastros!: UserCadastro[];
-  formulario: any;
 
-  constructor() {}
+  formulario: any;
+  user: any;
+
+  constructor(private userCadastroService: UserCadastroService) {}
 
   ngOnInit(): void {
     this.userCadastros = [];
@@ -29,10 +32,12 @@ export class CadastrarComponent implements OnInit {
   }
 
   registration(): void {
-    this.formulario.value.id = Guid.create().toString();
-    const userCadastro: UserCadastro = this.formulario.value;
-    this.userCadastros.push(userCadastro);
-    localStorage.setItem('BDlocalStorage', JSON.stringify(this.userCadastros));
-    this.formulario.reset();
+    this.userCadastroService
+      .saveUsers(this.formulario.value)
+      .subscribe((user: any) => {
+        this.user = user;
+        this.formulario.reset();
+        console.log('test', this.user);
+      });
   }
 }

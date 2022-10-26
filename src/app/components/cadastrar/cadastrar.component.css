@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
+  color: rgb(0, 0, 0);
+}
+
 .loginText {
   color: #666666;
   display: flex;
