@@ -32,23 +32,13 @@
     },
     {
       "id": 3,
-      "name": "rrrrrr",
-      "email": "11",
-      "password": "11",
-      "genre": "rrr",
-      "birthday": "0001-11-11",
-      "cpf": "111",
+      "name": "ie",
+      "email": "1",
+      "password": "1",
+      "genre": "ee",
+      "birthday": "1111-11-11",
+      "cpf": "1111",
       "telephone": "11"
-    },
-    {
-      "id": 4,
-      "name": null,
-      "email": null,
-      "password": null,
-      "genre": null,
-      "birthday": null,
-      "cpf": null,
-      "telephone": null
     }
   ]
 }

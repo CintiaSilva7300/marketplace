@@ -17,12 +17,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = new FormGroup({
       id: new FormControl(),
-      name: new FormControl('Cintia'),
-      email: new FormControl('cintia@gmail.com'),
-      password: new FormControl('123456'),
+      name: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
     });
   }
-  login() {
-    alert('teste');
-  }
+  login() {}
 }
