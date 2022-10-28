@@ -1,0 +1,179 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "name": "Kit gamer Evolut Starter",
+      "description": "eg-50 Teclado abnt2 led rainbow + Mouse led rainbow até 2400dpi + Mousepad 250x210x2mm Emborrachado + headset",
+      "valor": 99.9,
+      "img": "https://shopinfo.vteximg.com.br/arquivos/ids/1311928-1000-1000/1.png?v=637781569602000000"
+    },
+    {
+      "id": 2,
+      "name": "Kit Gamer Motospeed ",
+      "description": "Fantasy One Mouse V50+Mousepad P60",
+      "valor": 221,
+      "img": "https://shopinfo.vteximg.com.br/arquivos/ids/1309342-1000-1000/1.png?v=637781526826530000"
+    },
+    {
+      "id": 3,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA AMD, VERMELHA, PG-OMG-AMD01",
+      "valor": 3.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-amd012117.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA, ROXA E DOURADA, PG-OMG-PRP01",
+      "valor": 1.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-prp015.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA, AZUL E DOURADA, PG-OMG-BLU01",
+      "valor": 2.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-blu01.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA AMD, PRETA, PG-OMG-AMD01",
+      "valor": 2.8,
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS31Ezr9WpURjdqCX-aWh6utoFKowK1yOk3o9Wr6J8qaklqcEwqukU_iIciSHdPHjiHcOJsbTr9OQ&usqp=CAc"
+    },
+    {
+      "id": 7,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA AMD, VERMELHA, PG-OMG-AMD01",
+      "valor": 10.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-amd012117.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA, ROXA E DOURADA, PG-OMG-PRP01",
+      "valor": 9.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-prp015.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA, AZUL E DOURADA, PG-OMG-BLU01",
+      "valor": 6.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-blu01.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA, ROXA E DOURADA, PG-OMG-PRP01",
+      "valor": 2.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-prp015.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Cadeira Gamer Pichau Omega",
+      "description": "CADEIRA GAMER PICHAU OMEGA, AZUL E DOURADA, PG-OMG-BLU01",
+      "valor": 8.799,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/ef72d3c27864510e5d4c0ce69bade259/p/g/pg-omg-blu01.jpg"
+    },
+    {
+      "id": 11,
+      "name": "COMPUTADOR GAMER YDALIR",
+      "description": "AMD RYZEN 9 7950X, GEFORCE RTX 4090 24GB, 32GB DDR5, SSD M.2 1TB + SSD 960GB",
+      "valor": 30.199,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/c/o/corsair-x570-config-001.jpg"
+    },
+    {
+      "id": 11,
+      "name": "COMBO GAMER NETUNO ",
+      "description": "4X1, RAINBOW, TECLADO ABNT2, MOUSE 8000DPI, MOUSEPAD MEDIO, HEADSET DRIVERS 50MM, PG-NTN-RBW01",
+      "valor": 249.9,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/g/pg-ntn-rbw01.jpg"
+    },
+    {
+      "id": 11,
+      "name": "GABINETE GAMER ",
+      "description": "AIGO DARKFLASH AQUARIUS MESH LATERAL ACRILICO PRETO",
+      "valor": 249.9,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/a/q/aquarius-mesh2.jpg"
+    },
+    {
+      "id": 11,
+      "name": "MONITOR GAMER MANCER ",
+      "description": "VALAK UZ31, 31.5 POL., VA, CURVO, FHD, 1MS, 165HZ, FREESYNC, HDMI/DP, MCR-VKUZ31-PL01",
+      "valor": 249.9,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcr-vkuz31-pl012.jpg"
+    },
+    {
+      "id": 11,
+      "name": "REFLETOR SOLAR ZINNIA ",
+      "description": "ZRS100, LED, 100W, BATERIA 8000MAH, COM CONTROLE REMOTO, IP67, ZNE-ZRS100-01",
+      "valor": 299,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/z/n/zne-zrs100-015.jpg"
+    },
+    {
+      "id": 11,
+      "name": "WATER COOLER DEEPCOOL",
+      "description": "CASTLE 240EX A-RGB, 240MM, PRETO, DP-GS-H12W-CSL240EX-AR",
+      "valor": 579.9,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/d/p/dp-gs-h12w-csl240ex-ar6.jpg"
+    },
+    {
+      "id": 11,
+      "name": "HEADSET GAMER MANCER ",
+      "description": "SPECTRUM, RGB, DRIVERS 50MM, PRETO, MCR-SCM-RGB01",
+      "valor": 579.9,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcr-scm-rgb013121_1.jpg"
+    },
+    {
+      "id": 11,
+      "name": "GABINETE GAMER",
+      "description": "AIGO DARKFLASH MELODY PRETO LATERAL ACRILICO",
+      "valor": 559.9,
+      "img": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/a/i/aigo-darkflash-melody-preto3.jpg"
+    }
+  ],
+  "UsersCadastro": [
+    {
+      "id": 1,
+      "name": "marcelo",
+      "genre": "masculino",
+      "birthday": "10/11/1998",
+      "cpf": "123 123 123 12",
+      "telephone": 99999999,
+      "email": "marcelo@gmail.com",
+      "password": "marcelo123"
+    },
+    {
+      "id": 2,
+      "name": "cc",
+      "email": "12",
+      "password": "12",
+      "genre": "cc",
+      "birthday": "1212-02-11",
+      "cpf": "122",
+      "telephone": "1222"
+    },
+    {
+      "id": 3,
+      "name": "cc",
+      "email": "11",
+      "password": "11",
+      "genre": "ccc",
+      "birthday": "0001-11-11",
+      "cpf": "111",
+      "telephone": "111"
+    }
+  ],
+
+  "usuarios": [
+    {
+      "id": 1,
+      "name": "marcelo",
+      "email": "marcelo@gmail.com",
+      "password": "marcelo123"
+    }
+  ]
+
+}

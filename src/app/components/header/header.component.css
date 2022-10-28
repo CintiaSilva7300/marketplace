@@ -13,10 +13,8 @@ h2 {
   padding: 0px;
   margin: 0px;
   height: 80px;
-  background-color: #f80032;
-  /* position: fixed;
-  top: 0; */
-  /* z-index: 9997; z-index: 9997; //sobrepondo todos os elemntos a baixo do header */
+  /* background-color: #f80032; */
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,27,27,1) 69%);
 }
 
 .logoHeader {

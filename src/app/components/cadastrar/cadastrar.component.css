@@ -2,8 +2,14 @@
   text-align: center;
 }
 
+.Top {
+  font-size: 13px;
+  font-weight: bold;
+  color: #666666;
+}
+
 h1 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   margin: 15px;
   color: rgb(0, 0, 0);
@@ -15,8 +21,8 @@ h1 {
   /* flex-direction: row; */
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  margin-top: 40px;
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 .bi {
@@ -37,7 +43,8 @@ h1 {
 
 .btn {
   text-decoration-color: none;
-  background-color: #e60014;
+  /* background-color: #e60014; */
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,27,27,1) 69%);
   color: white;
   font-weight:bold ;
   min-height: 50px;
@@ -45,7 +52,8 @@ h1 {
 }
 
 .textFim {
-  margin-top: 40px;
+  margin-top: 10px;
   text-align: center;
+  padding: 20px;
 }
 

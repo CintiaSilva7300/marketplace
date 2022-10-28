@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 15px;
+  color: rgb(0, 0, 0);
+}
+
 .loginText {
   color: #666666;
   display: flex;
@@ -30,7 +37,7 @@
 
 .btn {
   text-decoration-color: none;
-  background-color: #e60014;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,27,27,1) 69%);
   color: white;
   font-weight:bold ;
   min-height: 50px;
