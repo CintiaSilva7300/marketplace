@@ -11,6 +11,8 @@ import { identifierName } from '@angular/compiler';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  inputPesquisa: string = '';
+
   produtos!: Produto[];
   formulario: any;
   id: any;
@@ -41,5 +43,21 @@ export class HomeComponent implements OnInit {
       this.produtos = data;
       console.log('test', data);
     });
+  }
+
+  filtrarProduto() {
+    if (this.inputPesquisa.length > 1) {
+      //filtrar apartir do segundo digito
+      this.produtos = this.produtos.filter((search: any) =>
+        search.name.toLowerCase().includes(this.inputPesquisa.toLowerCase())
+      );
+    } else {
+      this.produtoService.getProdutos().subscribe((pro: Produto[]) => {
+        this.produtos = pro;
+      });
+    }
+
+    console.log(this.inputPesquisa);
+    console.log(this.inputPesquisa.length);
   }
 }
