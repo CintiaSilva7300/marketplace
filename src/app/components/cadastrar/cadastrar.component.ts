@@ -37,6 +37,7 @@ export class CadastrarComponent implements OnInit {
       .subscribe((user: any) => {
         this.user = user;
         this.formulario.reset();
+        localStorage.setItem('user', JSON.stringify(user));
         console.log('test', this.user);
       });
   }

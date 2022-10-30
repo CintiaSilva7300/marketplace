@@ -1,0 +1,19 @@
+
+.divFooter {
+  height: 280px;
+  width: 100%;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,27,27,1) 69%);
+}
+
+.email {
+  padding: 5px;
+  color: white;
+  /* text-decoration: overline; */
+}
+
+a {
+  color: black;
+  text-decoration: underline
+}
+
+

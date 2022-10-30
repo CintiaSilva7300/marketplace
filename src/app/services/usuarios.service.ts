@@ -7,9 +7,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UsuariosService {
-  url = 'http://localhost:3000/usuarios';
+  url = 'http://localhost:3000/UsersCadastro';
 
   constructor(private httpClient: HttpClient) {}
+  users!: any[];
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -24,5 +25,11 @@ export class UsuariosService {
     return this.httpClient.get<UserLogin[]>(this.url + '' + id, {
       params: params,
     });
+  }
+
+  getUserByEmailAndPassword(email: any, password: any): any {
+    return this.httpClient.get<any>(
+      this.url + '?email=' + email + '&password=' + password
+    );
   }
 }

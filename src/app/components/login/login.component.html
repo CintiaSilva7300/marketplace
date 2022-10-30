@@ -13,7 +13,7 @@
   </div>
   <p>Veja seus pedidos de forma fácil, compre mais <br>rápido e tenha uma experiência personalizada :)</p>
 
-  <form class="form" [formGroup]="formulario" (ngSubmit)="login()">
+  <form class="form" [formGroup]="formulario" (submit)="login()">
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">e-mail:</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
@@ -23,6 +23,7 @@
       <input type="password" class="form-control" id="exampleInputPassword1"
       formControlName="password">
     </div>
+    <!-- <p *ngIf="userNotFound">Usuario não encontrado</p> -->
 
     <button type="submit" class="btn">continuar</button>
 

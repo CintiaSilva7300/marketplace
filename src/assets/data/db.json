@@ -164,16 +164,46 @@
       "birthday": "0001-11-11",
       "cpf": "111",
       "telephone": "111"
-    }
-  ],
-
-  "usuarios": [
+    },
     {
-      "id": 1,
-      "name": "marcelo",
-      "email": "marcelo@gmail.com",
-      "password": "marcelo123"
+      "id": 4,
+      "name": "test",
+      "email": "1111",
+      "password": "1111",
+      "genre": "eeee",
+      "birthday": "0011-11-11",
+      "cpf": "1111",
+      "telephone": "111"
+    },
+    {
+      "id": 5,
+      "name": "Teste",
+      "email": "111@111",
+      "password": "111",
+      "genre": "eeee",
+      "birthday": "0011-11-11",
+      "cpf": "1111",
+      "telephone": "111"
+    },
+    {
+      "id": 6,
+      "name": "hhh",
+      "email": "666666",
+      "password": "65666",
+      "genre": "gtggg",
+      "birthday": "0011-11-11",
+      "cpf": "44444",
+      "telephone": "66666"
+    },
+    {
+      "id": 7,
+      "name": "cintia",
+      "email": "cintia",
+      "password": "sss",
+      "genre": "ssss",
+      "birthday": "0011-11-11",
+      "cpf": "1111",
+      "telephone": "111"
     }
   ]
-
 }
