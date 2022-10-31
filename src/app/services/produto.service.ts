@@ -24,11 +24,16 @@ export class ProdutoService {
     return this.httpClient.get<Produto[]>(this.url);
   }
 
-  public getProdutosId(id: string): Observable<any> {
+  // public getProdutosId(id: string): Observable<any> {
+  //   let params = new HttpParams().set('id', id);
+  //   return this.httpClient.get<Produto[]>(this.url + '/' + id, {
+  //     params: params,
+  //   });
+  // }
+
+  getProdutosId(id: any): Observable<Produto[]> {
     let params = new HttpParams().set('id', id);
-    return this.httpClient.get<Produto[]>(this.url + '/' + id, {
-      params: params,
-    });
+    return this.httpClient.get<any>(this.url);
   }
 
   saveProduto(produto: Produto): Observable<Produto> {

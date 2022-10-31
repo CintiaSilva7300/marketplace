@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+import { UserLogin } from './../login/models/login';
+import { UsuariosService } from './../../services/usuarios.service';
 import { Guid } from 'guid-typescript';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Produto } from './../login/models/produto';
@@ -13,11 +16,17 @@ import { identifierName } from '@angular/compiler';
 export class HomeComponent implements OnInit {
   inputPesquisa: string = '';
 
+  users!: UserLogin[];
   produtos!: Produto[];
+  userNotFound!: boolean;
   formulario: any;
   id: any;
 
-  constructor(private produtoService: ProdutoService) {}
+  constructor(
+    private produtoService: ProdutoService,
+    private usuariosService: UsuariosService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getProdutos();
@@ -38,11 +47,20 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  saveStorage(id: any): void {
-    this.produtoService.getProdutosId(id).subscribe((data) => {
-      this.produtos = data;
-      console.log('test', data);
-    });
+  saveStorage() {
+    this.produtoService
+      .getProdutosId(this.formulario)
+      .subscribe((response: any) => {
+        if (response.length > 0) {
+          localStorage.setItem('produtos', JSON.stringify(response[0]));
+          this.router.navigate(['carinho']);
+        } else {
+          this.userNotFound = true;
+        }
+        console.log('aquiiiiiiii');
+        // this.produtos = data;
+        // console.log('test', data);
+      });
   }
 
   filtrarProduto() {
@@ -59,5 +77,10 @@ export class HomeComponent implements OnInit {
 
     console.log(this.inputPesquisa);
     console.log(this.inputPesquisa.length);
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 }

@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   users!: UserLogin[];
   formulario: any;
-  // router: any;
+  userNotFound!: boolean;
 
   constructor(
     private usuariosService: UsuariosService,
@@ -24,6 +24,13 @@ export class LoginComponent implements OnInit {
     this.formulario = new FormGroup({
       email: new FormControl(),
       password: new FormControl(),
+    });
+  }
+
+  getUsers() {
+    this.usuariosService.getUsuarios().subscribe((users: UserLogin[]) => {
+      this.users = users;
+      console.log('users', this.users);
     });
   }
 
@@ -38,8 +45,8 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('user', JSON.stringify(data[0]));
           this.router.navigate(['/']);
         } else {
-          // this.userNotFound = true
-          alert('usuario não encontrado');
+          this.userNotFound = true;
+          // alert('usuario não encontrado');
         }
       });
   }
