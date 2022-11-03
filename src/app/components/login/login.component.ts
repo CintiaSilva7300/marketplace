@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   users!: UserLogin[];
   formulario: any;
   userNotFound!: boolean;
+  getLocalhistorage: any;
 
   constructor(
     private usuariosService: UsuariosService,
@@ -42,12 +43,17 @@ export class LoginComponent implements OnInit {
       )
       .subscribe((data: any) => {
         if (data.length > 0) {
-          localStorage.setItem('user', JSON.stringify(data[0]));
+          localStorage.setItem('Localhistorage', JSON.stringify(data));
           this.router.navigate(['/']);
         } else {
           this.userNotFound = true;
-          // alert('usuario não encontrado');
         }
       });
+  }
+
+  loadData() {
+    let data: any = localStorage.getItem('getLocalhistorage');
+    this.getLocalhistorage = JSON.parse(data);
+    console.log('testee1', this.getLocalhistorage);
   }
 }

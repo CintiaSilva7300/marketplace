@@ -32,7 +32,7 @@ export class ProdutoService {
   // }
 
   getProdutosId(id: any): Observable<Produto[]> {
-    let params = new HttpParams().set('id', id);
+    new HttpParams().set('id', id);
     return this.httpClient.get<any>(this.url);
   }
 

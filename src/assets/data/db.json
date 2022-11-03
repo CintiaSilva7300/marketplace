@@ -146,64 +146,24 @@
       "password": "marcelo123"
     },
     {
-      "id": 2,
-      "name": "cc",
-      "email": "12",
-      "password": "12",
-      "genre": "cc",
-      "birthday": "1212-02-11",
-      "cpf": "122",
-      "telephone": "1222"
+      "id": 8,
+      "name": "Cintia",
+      "email": "cintiasilva7300@gmail.com",
+      "password": "123456",
+      "genre": "Feminino",
+      "birthday": "1997-03-19",
+      "cpf": "999.999.999-99",
+      "telephone": "9 9999-9999"
     },
     {
-      "id": 3,
-      "name": "cc",
-      "email": "11",
-      "password": "11",
-      "genre": "ccc",
-      "birthday": "0001-11-11",
-      "cpf": "111",
-      "telephone": "111"
-    },
-    {
-      "id": 4,
-      "name": "test",
-      "email": "1111",
-      "password": "1111",
-      "genre": "eeee",
-      "birthday": "0011-11-11",
-      "cpf": "1111",
-      "telephone": "111"
-    },
-    {
-      "id": 5,
-      "name": "Teste",
-      "email": "111@111",
-      "password": "111",
-      "genre": "eeee",
-      "birthday": "0011-11-11",
-      "cpf": "1111",
-      "telephone": "111"
-    },
-    {
-      "id": 6,
-      "name": "hhh",
-      "email": "666666",
-      "password": "65666",
-      "genre": "gtggg",
-      "birthday": "0011-11-11",
-      "cpf": "44444",
-      "telephone": "66666"
-    },
-    {
-      "id": 7,
-      "name": "cintia",
-      "email": "cintia",
-      "password": "sss",
-      "genre": "ssss",
-      "birthday": "0011-11-11",
-      "cpf": "1111",
-      "telephone": "111"
+      "id": 9,
+      "name": "Henriquev",
+      "email": "enriquev@gmail.com",
+      "password": "123",
+      "genre": "Menino",
+      "birthday": "1996-11-11",
+      "cpf": "999.999.999.99",
+      "telephone": "11 1111-1111"
     }
   ]
 }

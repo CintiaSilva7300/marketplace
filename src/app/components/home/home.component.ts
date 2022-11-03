@@ -18,9 +18,10 @@ export class HomeComponent implements OnInit {
 
   users!: UserLogin[];
   produtos!: Produto[];
-  userNotFound!: boolean;
+  // userNotFound!: boolean;
   formulario: any;
   id: any;
+  itemId: any;
 
   constructor(
     private produtoService: ProdutoService,
@@ -43,24 +44,8 @@ export class HomeComponent implements OnInit {
   getProdutos() {
     this.produtoService.getProdutos().subscribe((produtos: Produto[]) => {
       this.produtos = produtos;
-      console.log('p', this.produtos);
+      // console.log('p', this.produtos);
     });
-  }
-
-  saveStorage() {
-    this.produtoService
-      .getProdutosId(this.formulario)
-      .subscribe((response: any) => {
-        if (response.length > 0) {
-          localStorage.setItem('produtos', JSON.stringify(response[0]));
-          this.router.navigate(['carinho']);
-        } else {
-          this.userNotFound = true;
-        }
-        console.log('aquiiiiiiii');
-        // this.produtos = data;
-        // console.log('test', data);
-      });
   }
 
   filtrarProduto() {
@@ -82,5 +67,23 @@ export class HomeComponent implements OnInit {
   logout() {
     localStorage.clear();
     this.router.navigate(['/login']);
+  }
+
+  // salvarPessoa() {}
+
+  saveStorage(item: any) {
+    this.itemId = item;
+    let carinhoStorage = localStorage.getItem('carinho');
+
+    if (carinhoStorage) {
+      carinhoStorage = carinhoStorage + ',' + this.itemId;
+      localStorage.setItem('carinho', carinhoStorage);
+      this.router.navigate(['carinho']);
+      return;
+    } else {
+      alert('Algo deu errado no method saveStorage!');
+    }
+    localStorage.setItem('carinho', this.itemId);
+    console.log('carinho');
   }
 }
