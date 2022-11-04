@@ -53,4 +53,9 @@ export class CarinhoComponent implements OnInit {
         console.log('historage arr', this.itemId);
       });
   }
+
+  comprar() {
+    alert('Continuar');
+    this.router.navigate(['/comprar']);
+  }
 }

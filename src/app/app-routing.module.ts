@@ -1,3 +1,4 @@
+import { ComprarComponent } from './components/comprar/comprar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: 'carrinho',
     component: CarinhoComponent,
+  },
+
+  {
+    path: 'comprar',
+    component: ComprarComponent,
   },
 
   {
