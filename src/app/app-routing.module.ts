@@ -16,7 +16,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'carinho',
+    path: 'carrinho',
     component: CarinhoComponent,
   },
 

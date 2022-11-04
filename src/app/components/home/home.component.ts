@@ -72,18 +72,18 @@ export class HomeComponent implements OnInit {
   // salvarPessoa() {}
 
   saveStorage(item: any) {
+    let carrinhoStorage = localStorage.getItem('carrinho');
     this.itemId = item;
-    let carinhoStorage = localStorage.getItem('carinho');
 
-    if (carinhoStorage) {
-      carinhoStorage = carinhoStorage + ',' + this.itemId;
-      localStorage.setItem('carinho', carinhoStorage);
-      this.router.navigate(['carinho']);
+    if (carrinhoStorage) {
+      carrinhoStorage = carrinhoStorage + ',' + this.itemId;
+      localStorage.setItem('carrinho', carrinhoStorage);
+      this.router.navigate(['carrinho']);
+      console.log('carrinho', this.itemId);
       return;
     } else {
       alert('Algo deu errado no method saveStorage!');
+      localStorage.setItem('carrinho', this.itemId);
     }
-    localStorage.setItem('carinho', this.itemId);
-    console.log('carinho');
   }
 }
