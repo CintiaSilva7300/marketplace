@@ -1,13 +1,35 @@
 <app-header></app-header>
 
-<br>
-<a
-  class="btn btn-primary"
-  (click)="getStorage()">Mostrar itens no storage
-</a>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <img src="https://shopinfo.vteximg.com.br/arquivos/ids/1309342-1000-1000/1.png?v=637781526826530000" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="card__content">
+        <div class="conteudo">
+          <h1 class="titulo"><Strong>Kit gamer Evolut Starter</Strong></h1>
+          <p class="desc">
+            eg-50 Teclado abnt2 led rainbow + Mouse led rainbow até 2400dpi +
+            Mousepad eg-50 Teclado abnt2 led rainbow + Mouse led rainbow até
+            2400dpi + Mousepad eg-50 Teclado abnt2 led rainbow + Mouse led
+            rainbow até 2400dpi + Mousepad eg-50 Teclado abnt2 led rainbow +
+            Mouse led rainbow até 2400dpi + Mousepad
+          </p>
+          <p><strong>Valor: 99.9 R$</strong></p>
+          <button class="comprar" type="submit">
+            <h5>Comprar</h5>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br><br>
-<a
-  class="btn btn-primary"
-  (click)="getData(produtos)">test array historage
-</a>
+<br /><br />
+<a class="btn btn-primary" (click)="getStorage()">Mostrar itens no storage </a>
+
+<br /><br />
+<a class="btn btn-primary" (click)="getData(produtos)">test array historage </a>
