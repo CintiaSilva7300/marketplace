@@ -13,8 +13,11 @@ export class CarinhoComponent implements OnInit {
   produtos!: Produto[];
   itemId: any;
   formulario: any;
+  carrinhoLista: any;
 
-  constructor(private produtoService: ProdutoService, private router: Router) {}
+  constructor(private produtoService: ProdutoService, private router: Router) {
+    this.getData();
+  }
 
   ngOnInit(): void {
     this.produtos = [];
@@ -26,32 +29,43 @@ export class CarinhoComponent implements OnInit {
     });
   }
 
-  getStorage() {
-    let carrinhoStorage = localStorage.getItem('carrinho');
+  // getStorage() {
+  //   let carrinhoStorage = localStorage.getItem('carrinho');
 
-    if (carrinhoStorage!.length > 0) {
-      // alert('tem');
-      console.log('aquiiiii', carrinhoStorage);
-    } else {
-      alert('Algo deu errado no method getStorages!');
+  //   if (carrinhoStorage!.length > 0) {
+  //     // alert('tem');
+  //     console.log('aquiiiii', carrinhoStorage);
+  //   } else {
+  //     alert('Algo deu errado no method getStorages!');
+  //   }
+  // }
+
+  getData() {
+    let idProdutoCarrinho: number[] = [];
+    const carrinhoLocalStorage = localStorage.getItem('carrinho');
+    console.log('0 - carrinhoLocalStorage', carrinhoLocalStorage);
+
+    if (carrinhoLocalStorage) {
+      const carrinhoArrayString = carrinhoLocalStorage?.split(',') || [];
+      console.log('1 - carrinhoArrayString', carrinhoArrayString);
+
+      idProdutoCarrinho = carrinhoArrayString.map((itemCarrinho) =>
+        Number(itemCarrinho)
+      );
+      console.log('2 - idProdutoCarrinho', idProdutoCarrinho);
     }
-  }
 
-  getData(item: any) {
-    this.itemId = item;
-    this.produtoService
-      .getProdutosId(this.formulario)
-      .subscribe((response: any) => {
-        if (response.length > 0) {
-          localStorage.setItem(
-            'produtos',
-            JSON.stringify(response[this.itemId])
-          );
-        } else {
-          alert('Algo deu errado');
-        }
-        console.log('historage arr', this.itemId);
-      });
+    this.produtoService.getProdutos().subscribe((response: any) => {
+      if (response.length > 0) {
+        console.log('entrou');
+        this.produtos = response.filter((item: any) =>
+          idProdutoCarrinho.includes(item.id)
+        );
+        console.log('produtos', this.produtos);
+      } else {
+        alert('Algo deu errado');
+      }
+    });
   }
 
   comprar() {

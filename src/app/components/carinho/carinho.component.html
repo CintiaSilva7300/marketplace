@@ -1,24 +1,51 @@
 <app-header></app-header>
 
-<div class="container">
+<h1 class="tituloCesta">minha cesta
+
+</h1>
+
+<div class="container tabela" *ngFor="let produto of produtos">
+  <div class="row" >
+    <div class="col" >
+      <div class="card" style="width: 6rem;">
+        <img class="card-img-top" [src]="produto.img" alt="Card image cap">
+      </div>
+    </div>
+    <div class="col">
+      <h1>testeee</h1>
+    </div>
+
+    <div class="col">
+      <h1>testeee2</h1>
+    </div>
+
+    <div class="col">
+      <div>
+        <h1>tesssssttt</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- <div class="container" *ngFor="let produto of produtos">
   <div class="row">
     <div class="col">
       <div class="card">
-        <img src="https://shopinfo.vteximg.com.br/arquivos/ids/1309342-1000-1000/1.png?v=637781526826530000" />
+        <img [src]="produto.img" />
       </div>
     </div>
     <div class="col">
       <div class="card__content">
         <div class="conteudo">
-          <h1 class="titulo"><Strong>Kit gamer Evolut Starter</Strong></h1>
-          <p class="desc">
-            eg-50 Teclado abnt2 led rainbow + Mouse led rainbow até 2400dpi +
-            Mousepad eg-50 Teclado abnt2 led rainbow + Mouse led rainbow até
-            2400dpi + Mousepad eg-50 Teclado abnt2 led rainbow + Mouse led
-            rainbow até 2400dpi + Mousepad eg-50 Teclado abnt2 led rainbow +
-            Mouse led rainbow até 2400dpi + Mousepad
+          <h1 class="titulo"><Strong>{{produto.name}}</Strong></h1>
+          <p class="desc">{{produto.description}}
           </p>
-          <p><strong>Valor: 99.9 R$</strong></p>
+          <p><strong>Valor: {{produto.valor}} R$</strong></p>
           <button class="comprar" (click)="comprar()" type="submit">
             <h5>Comprar</h5>
           </button>
@@ -26,11 +53,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
-<br /><br /><br /><br /><br /><br />
-<a class="btn btn-primary" (click)="getStorage()">Mostrar itens no storage </a>
-
-<br /><br />
-<a class="btn btn-primary" (click)="getData(produtos)">test array historage </a>
