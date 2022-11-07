@@ -14,6 +14,7 @@ export class CarinhoComponent implements OnInit {
   itemId: any;
   formulario: any;
   carrinhoLista: any;
+  somaValor: any;
 
   constructor(private produtoService: ProdutoService, private router: Router) {
     this.getData();
@@ -28,17 +29,6 @@ export class CarinhoComponent implements OnInit {
       valor: new FormControl(),
     });
   }
-
-  // getStorage() {
-  //   let carrinhoStorage = localStorage.getItem('carrinho');
-
-  //   if (carrinhoStorage!.length > 0) {
-  //     // alert('tem');
-  //     console.log('aquiiiii', carrinhoStorage);
-  //   } else {
-  //     alert('Algo deu errado no method getStorages!');
-  //   }
-  // }
 
   getData() {
     let idProdutoCarrinho: number[] = [];
@@ -57,16 +47,51 @@ export class CarinhoComponent implements OnInit {
 
     this.produtoService.getProdutos().subscribe((response: any) => {
       if (response.length > 0) {
-        console.log('entrou');
+        // console.log('entrou');
         this.produtos = response.filter((item: any) =>
           idProdutoCarrinho.includes(item.id)
         );
-        console.log('produtos', this.produtos);
+        console.log('ProdutoLocalHistorage', this.produtos);
       } else {
         alert('Algo deu errado');
       }
     });
   }
+
+  valorTotal() {
+    for (var i = 0; i < this.produtos.length; i++) {
+      this.somaValor += this.produtos[i];
+    }
+    console.log('soma', this.somaValor);
+
+    // const soma = this.produtos
+    //   .map((item) => item.valor)
+    //   .reduce((prev, curr) => prev + curr);
+    // console.log(soma);
+  }
+
+  // for (var i = 0; i < this.produtos.length; i++) {
+  //   this.somaValor += this.produtos[i].valor;
+  //   console.log(this.somaValor);
+  // }
+  // ------//
+  // this.produtos.filter((element) => {
+  //   if (element.valor) {
+  //     element.valor = ++element.valor;
+  //   }
+  //   console.log('element', element.valor);
+  // });
+  // console.log(this.produtos.length);
+
+  //   var numbers = [1,56,78,32,45];
+
+  // var sum = 0;
+
+  // for(var i =0;i<numbers.length;i++){
+  //    sum+=numbers[i];
+  // }
+
+  // console.log(sum);
 
   comprar() {
     alert('Continuar');

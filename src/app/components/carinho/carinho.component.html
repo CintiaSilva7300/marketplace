@@ -1,58 +1,52 @@
 <app-header></app-header>
 
-<h1 class="tituloCesta">minha cesta
-
+<h1
+  class="tituloCesta">minha cesta
 </h1>
 
-<div class="container tabela" *ngFor="let produto of produtos">
-  <div class="row" >
-    <div class="col" >
-      <div class="card" style="width: 6rem;">
-        <img class="card-img-top" [src]="produto.img" alt="Card image cap">
-      </div>
-    </div>
-    <div class="col">
-      <h1>testeee</h1>
-    </div>
-
-    <div class="col">
-      <h1>testeee2</h1>
-    </div>
-
-    <div class="col">
-      <div>
-        <h1>tesssssttt</h1>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<!-- <div class="container" *ngFor="let produto of produtos">
+<div class="container">
   <div class="row">
-    <div class="col">
-      <div class="card">
-        <img [src]="produto.img" />
-      </div>
-    </div>
-    <div class="col">
-      <div class="card__content">
-        <div class="conteudo">
-          <h1 class="titulo"><Strong>{{produto.name}}</Strong></h1>
-          <p class="desc">{{produto.description}}
-          </p>
-          <p><strong>Valor: {{produto.valor}} R$</strong></p>
-          <button class="comprar" (click)="comprar()" type="submit">
-            <h5>Comprar</h5>
-          </button>
+    <div class="col-8">
+      <div class="container tabela" *ngFor="let produto of produtos">
+        <div class="row">
+          <div class="card" style="width: 6rem;">
+            <img class="card-img-top" [src]="produto.img" alt="Card image cap">
+          </div>
+          <div class="col">
+            <h1 class="produto_name"><Strong>{{produto.name}}</Strong></h1>
+          </div>
+          <div class="col">
+            <p class="desc">{{produto.description}}
+            </p>
+          </div>
+          <div class="col">
+            <div>
+              <p><strong>Valor: {{produto.valor}} R$</strong></p>
+            </div>
+            <button type="button" class="btn btn-danger">
+              <h1 class="mais">+</h1>
+            </button>
+            <button type="button" class="btn btn-danger">
+              <h1 class="menos">-</h1>
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    <div class="col-3">
+      <p>Itens no carrinho<strong> {{produtos.length}}</strong></p>
+      <p>MAIS INFORMAÇÕESMAIS INFORMAÇÕESMAIS INFORMAÇÕESMAIS INFORMAÇÕES</p>
+
+      <button (click)="valorTotal()">total</button>
+
+
+      <button class="btn btn-danger" style="width: 100%; height: 40px;margin-left: 100px;background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(195, 27, 27, 1) 69%);" [routerLink]="['/comprar']" routerLinkActive="router-link-active" (click)="valorTotal()">Total</button>
+    </div>
   </div>
-</div> -->
+
+
+
+</div>
+
 
 
