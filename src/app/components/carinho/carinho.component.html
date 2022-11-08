@@ -13,7 +13,7 @@
             <img class="card-img-top" [src]="produto.img" alt="Card image cap">
           </div>
           <div class="col">
-            <h1 class="produto_name"><Strong>{{produto.name}}</Strong></h1>
+            <h1 class="produto_name"><Strong>{{produto.name}}</Strong><br> Produto id:{{produto.id}}</h1>
           </div>
           <div class="col">
             <p class="desc">{{produto.description}}
@@ -21,9 +21,9 @@
           </div>
           <div class="col">
             <div>
-              <p><strong>Valor: {{produto.valor}} R$</strong></p>
+              <p><strong>valor: {{produto.valor}} R$</strong></p>
             </div>
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn btn-danger ">
               <h1 class="mais">+</h1>
             </button>
             <button type="button" class="btn btn-danger">
@@ -34,17 +34,22 @@
       </div>
     </div>
     <div class="col-3">
-      <p>Itens no carrinho<strong> {{produtos.length}}</strong></p>
-      <p>MAIS INFORMAÇÕESMAIS INFORMAÇÕESMAIS INFORMAÇÕESMAIS INFORMAÇÕES</p>
+      <h1 class="text1">resumo do pedido</h1>
+      <div class="texto2">
+        <p><strong> {{produtos.length}} produto adicionado </strong></p>
+        <p><strong> Total: {{valorTotal()}} </strong></p>
+      </div>
 
-      <button (click)="valorTotal()">total</button>
-
-
-      <button class="btn btn-danger" style="width: 100%; height: 40px;margin-left: 100px;background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(195, 27, 27, 1) 69%);" [routerLink]="['/comprar']" routerLinkActive="router-link-active" (click)="valorTotal()">Total</button>
+      <button class="btn btn-danger btnContinuar"  [routerLink]="['/comprar']"                routerLinkActive="router-link-active" (click)="valorTotal()">Continuar
+      </button>
+      <hr>
+        <a class="text3" href="/">adicionar mais produtos</a>
+      <hr/>
     </div>
   </div>
 <br>
-<h1>Valor total do carrinho: {{valorTotal()}}</h1>
+<!-- <h1>Valor total do carrinho: {{valorTotal()}}</h1>
+<button (click)="valorTotal()">total</button> -->
 
 </div>
 
