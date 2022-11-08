@@ -2,7 +2,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Produto } from './../login/models/produto';
 import { ProdutoService } from './../../services/produto.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carinho',
@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carinho.component.css'],
 })
 export class CarinhoComponent implements OnInit {
+  // @Input() private soma!: string;
+
   produtos!: Produto[];
   itemId: any;
   formulario: any;
@@ -59,42 +61,21 @@ export class CarinhoComponent implements OnInit {
   }
 
   valorTotal() {
+    var soma = 0;
     for (var i = 0; i < this.produtos.length; i++) {
-      this.somaValor += this.produtos[i];
+      soma = soma + this.produtos[i].valor;
+      // console.log('soma: ', soma);
     }
-    console.log('soma', this.somaValor);
-
-    // const soma = this.produtos
-    //   .map((item) => item.valor)
-    //   .reduce((prev, curr) => prev + curr);
+    return soma;
     // console.log(soma);
   }
 
-  // for (var i = 0; i < this.produtos.length; i++) {
-  //   this.somaValor += this.produtos[i].valor;
-  //   console.log(this.somaValor);
-  // }
   // ------//
-  // this.produtos.filter((element) => {
-  //   if (element.valor) {
-  //     element.valor = ++element.valor;
-  //   }
-  //   console.log('element', element.valor);
-  // });
-  // console.log(this.produtos.length);
-
-  //   var numbers = [1,56,78,32,45];
-
-  // var sum = 0;
-
-  // for(var i =0;i<numbers.length;i++){
-  //    sum+=numbers[i];
-  // }
-
-  // console.log(sum);
 
   comprar() {
     alert('Continuar');
     this.router.navigate(['/comprar']);
   }
+
+  // get inprimiValorTotalCarrinho() {}
 }
