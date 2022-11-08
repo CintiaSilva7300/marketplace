@@ -76,6 +76,4 @@ export class CarinhoComponent implements OnInit {
     alert('Continuar');
     this.router.navigate(['/comprar']);
   }
-
-  // get inprimiValorTotalCarrinho() {}
 }
