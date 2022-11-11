@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
 
   users!: UserLogin[];
   produtos!: Produto[];
-  // userNotFound!: boolean;
   formulario: any;
   id: any;
   itemId: any;
@@ -59,7 +58,6 @@ export class HomeComponent implements OnInit {
         this.produtos = pro;
       });
     }
-
     console.log(this.inputPesquisa);
     console.log(this.inputPesquisa.length);
   }
@@ -68,8 +66,6 @@ export class HomeComponent implements OnInit {
     localStorage.clear();
     this.router.navigate(['/login']);
   }
-
-  // salvarPessoa() {}
 
   saveStorage(item: any) {
     let carrinhoStorage = localStorage.getItem('carrinho');

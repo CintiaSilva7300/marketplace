@@ -1,7 +1,6 @@
 <app-header></app-header>
 
-<h1
-  class="tituloCesta">minha cesta
+<h1 class="tituloCesta">minha cesta
 </h1>
 
 <div class="container">
@@ -35,23 +34,23 @@
     </div>
     <div class="col-3">
       <h1 class="text1">resumo do pedido</h1>
-      <div class="texto2">
-        <p><strong> {{produtos.length}} produto adicionado </strong></p>
-        <p><strong> Total: {{valorTotal()}} </strong></p>
-      </div>
-
-      <button class="btn btn-danger btnContinuar"  [routerLink]="['/comprar']"                routerLinkActive="router-link-active" (click)="valorTotal()">Continuar
-      </button>
       <hr>
-        <a class="text3" href="/">adicionar mais produtos</a>
-      <hr/>
+      <div class="texto2">
+        <p><strong> Subtotal ({{produtos.length}} produtos)</strong></p>
+        <p><strong> {{valorTotal()}} R$</strong></p>
+      </div>
+      <hr />
+      <p class="resumoNomeProdutoresumo do pedido"><strong> Total de: {{valorTotal()}} R$</strong></p>
+      <p class="resumoNomeProduto" *ngFor="let produto of produtos">
+        {{produto.name}}
+      </p>
+      <hr>
+      <button class="btn btn-danger btnContinuar" [routerLink]="['/comprar']" routerLinkActive="router-link-active"
+        (click)="valorTotal()">Continuar
+      </button>
+      <a class="text3" href="/">adicionar mais produtos</a>
+      <hr />
     </div>
   </div>
-<br>
-<!-- <h1>Valor total do carrinho: {{valorTotal()}}</h1>
-<button (click)="valorTotal()">total</button> -->
-
 </div>
-
-
 
