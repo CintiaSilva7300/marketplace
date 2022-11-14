@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'marketplace';
+  // title = 'marketplace';
 }
+
+let exibirAlerta = false;
+const titulo = 'marketplace';
+const notificacoes = 'marketplace ❤';
+
+const alterarTitulo = setInterval(() => {
+  document.title = exibirAlerta ? titulo : notificacoes;
+  exibirAlerta = !exibirAlerta;
+}, 800);

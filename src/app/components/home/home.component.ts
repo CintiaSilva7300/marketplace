@@ -1,12 +1,10 @@
 import { Router } from '@angular/router';
 import { UserLogin } from './../login/models/login';
 import { UsuariosService } from './../../services/usuarios.service';
-import { Guid } from 'guid-typescript';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Produto } from './../login/models/produto';
 import { ProdutoService } from './../../services/produto.service';
 import { Component, OnInit } from '@angular/core';
-import { identifierName } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -26,10 +24,13 @@ export class HomeComponent implements OnInit {
     private produtoService: ProdutoService,
     private usuariosService: UsuariosService,
     private router: Router
-  ) {}
+  ) {
+    this.getData();
+  }
 
   ngOnInit(): void {
     this.getProdutos();
+    this.getUsuarios();
 
     this.produtos = [];
     this.formulario = new FormGroup({
@@ -44,6 +45,13 @@ export class HomeComponent implements OnInit {
     this.produtoService.getProdutos().subscribe((produtos: Produto[]) => {
       this.produtos = produtos;
       // console.log('p', this.produtos);
+    });
+  }
+
+  getUsuarios() {
+    this.usuariosService.getUsuarios().subscribe((users: UserLogin[]) => {
+      this.users = users;
+      console.log('users', this.users);
     });
   }
 
@@ -81,5 +89,28 @@ export class HomeComponent implements OnInit {
       alert('Algo deu errado no method saveStorage!');
       localStorage.setItem('carrinho', this.itemId);
     }
+  }
+
+  getData() {
+    let idUsers: number[] = [];
+    const userLocalStorage = localStorage.getItem('users');
+    console.log('0 - teste', userLocalStorage);
+
+    if (userLocalStorage) {
+      const userArrayString = userLocalStorage?.split(',') || [];
+      console.log('1 - userArrayString', userArrayString);
+
+      idUsers = userArrayString.map((item) => Number(item));
+      console.log('2 - idProdutoCarrinho', idUsers);
+    }
+
+    this.usuariosService.getUsuarios().subscribe((response: any) => {
+      if (response.length > 0) {
+        this.users = response.filter((item: any) => idUsers.includes(item.id));
+        console.log('UsersLocalHistorage', this.users);
+      } else {
+        alert('Algo deu errado');
+      }
+    });
   }
 }
