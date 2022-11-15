@@ -1,3 +1,64 @@
 <app-header></app-header>
+    <main class="main-wrapper" >
+        <div class="header">
+          <p class="header-info">
+              <span >Dados de pagamento</span>
+          </p>
+        </div>
 
-<h1 style="font-size: 30px;">Aqui vai ser a tela de dados pra compra </h1>
+        <div class="payment-main-wrapper">
+            <div class="user-card-info-wrapper">
+                <h2>Dados do titular do cartão</h2>
+                <form class="credit-card-info">
+                    <label for="card-number">Número do cartão</label>
+                    <div class="credit-card-number">
+                        <input type="number" name="card-number" id="card-number">
+                    </div>
+                    <div class="validity-and-sc">
+                        <div class="validity">
+                            <label for="card-validity">Validade</label>
+                            <input type="number" name="card-validity" id="card-validity" placeholder="MM/AA">
+                        </div>
+                        <div class="security-code">
+                            <label for="card-security-code">Código de segurança</label>
+                            <div class="card-security-code-input-and-icon">
+                                <input type="number" name="card-security-code" id="card-security-code" placeholder="CVV">
+                            </div>
+                        </div>
+                    </div>
+                    <label for="name">Nome completo</label>
+                    <input type="text" name="name" id="name">
+                    <label for="cpf">CPF</label>
+                    <input type="number" name="cpf" id="cpf" placeholder="___-___-___-__">
+                   <div class="phone-and-birthday">
+                        <div class="phone">
+                            <label for="card-validity">Telefone</label>
+                            <input type="number" name="phone" id="phone" placeholder="(__) _____ - ____">
+                        </div>
+
+                        <div class="birthday">
+                            <label for="card-validity">Data de nascimento</label>
+                            <input type="number" name="phone" id="phone" placeholder="DD/MM/AAAA">
+                        </div>
+                   </div>
+                </form>
+            </div>
+            <div class="user-shop-cart-info-wrapper">
+                <div class="request-card" >
+                    <h2>Resumo do pedido</h2>
+                    <strong>itens do pedido  ({{produtos.length}} produtos)</strong>
+                    <p *ngFor="let produto of produtos">{{produto.name}}</p>
+                    <h3>Forma de Pagamento</h3>
+                    <strong id="credit-card-icon"> <strong class="material-icons" id="cc-option">
+                    </strong> Cartão de crédito</strong>
+                    <h3>Tempo de processamento</h3>
+                    <p id="payment-process-time">1 dia útil</p>
+                    <h3>Total a pagar</h3>
+                    <p id="request-price">R$ {{valorTotal()}}<strong id="payment-portion">1x sem juros</strong> </p>
+                    <input type="button" value="Finalizar Compra" id="finish-payment"><br>
+                    <a class="text3" href="/">adicionar mais produtos</a>
+                </div>
+            </div>
+        </div>
+    </main>
+

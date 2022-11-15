@@ -16,8 +16,8 @@ export class CarinhoComponent implements OnInit {
   itemId: any;
   formulario: any;
   carrinhoLista: any;
-  somaValor: any;
-  promocao = true;
+  // somaValor: any;
+  // promocao = true;
   resultado: any;
 
   constructor(private produtoService: ProdutoService, private router: Router) {
@@ -67,12 +67,8 @@ export class CarinhoComponent implements OnInit {
     for (var i = 0; i < this.produtos.length; i++) {
       soma = soma + this.produtos[i].valor;
     }
-    // console.log('totaaaal', soma);
     return soma;
   }
-
-  valorTotal10Des(): any {}
-  // ------//
 
   comprar() {
     alert('Continuar');
