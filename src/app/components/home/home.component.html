@@ -7,13 +7,13 @@
     </div>
 </nav>
 
-<!-- <div *ngIf="users; else elseBlock">
+<div *ngIf="users; else elseBlock">
   <div *ngFor="let user of users">
     <p>{{user.email}}</p>
   </div>
-</div> -->
-<!-- <ng-template #elseBlock><p>ningume logado</p></ng-template> -->
-<!-- <p [innerHTML]="users | json">teste</p> -->
+</div>
+<ng-template #elseBlock><p>ningume logado</p></ng-template>
+<p [innerHTML]="users | json">teste</p>
 
 <div class="container col-12">
   <div class="input-group">
