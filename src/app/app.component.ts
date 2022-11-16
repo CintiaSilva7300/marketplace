@@ -11,7 +11,7 @@ export class AppComponent {
 
 let exibirAlerta = false;
 const titulo = 'marketplace';
-const notificacoes = 'marketplace ❤';
+const notificacoes = 'marketplace';
 
 const alterarTitulo = setInterval(() => {
   document.title = exibirAlerta ? titulo : notificacoes;

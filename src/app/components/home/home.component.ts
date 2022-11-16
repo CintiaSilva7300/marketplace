@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   formulario: any;
   id: any;
   itemId: any;
+  userNotFound!: boolean;
 
   constructor(
     private produtoService: ProdutoService,
@@ -49,10 +50,18 @@ export class HomeComponent implements OnInit {
   }
 
   getUsuarios() {
-    this.usuariosService.getUsuarios().subscribe((users: UserLogin[]) => {
-      this.users = users;
-      console.log('users', this.users);
-    });
+    // this.usuariosService.getUsuarios().subscribe((users: UserLogin[]) => {
+    //   this.users = users;
+    //   console.log('users', this.users);
+    // });
+
+    let test: any;
+    if (localStorage.length > 0) {
+      localStorage.setItem('name', JSON.stringify(this.users));
+      console.log('test test', localStorage);
+    } else {
+      alert('localHistorage esta vazio');
+    }
   }
 
   filtrarProduto() {
@@ -92,25 +101,12 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    let idUsers: number[] = [];
-    const userLocalStorage = localStorage.getItem('users');
-    console.log('0 - teste', userLocalStorage);
-
-    if (userLocalStorage) {
-      const userArrayString = userLocalStorage?.split(',') || [];
-      console.log('1 - userArrayString', userArrayString);
-
-      idUsers = userArrayString.map((item) => Number(item));
-      console.log('2 - idProdutoCarrinho', idUsers);
+    let test: any;
+    if (localStorage.length > 0) {
+      localStorage.setItem('test', JSON.stringify(test));
+      return console.log('test test', localStorage);
+    } else {
+      alert('localHistorage esta vazio');
     }
-
-    this.usuariosService.getUsuarios().subscribe((response: any) => {
-      if (response.length > 0) {
-        this.users = response.filter((item: any) => idUsers.includes(item.id));
-        console.log('UsersLocalHistorage', this.users);
-      } else {
-        alert('Algo deu errado');
-      }
-    });
   }
 }

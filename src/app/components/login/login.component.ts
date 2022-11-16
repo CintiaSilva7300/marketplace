@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
   formulario: any;
   userNotFound!: boolean;
   getLocalhistorage: any;
+  itemId: any;
+  id: any;
 
   constructor(
     private usuariosService: UsuariosService,
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = new FormGroup({
+      id: new FormControl(),
       email: new FormControl(),
       password: new FormControl(),
     });
@@ -31,7 +34,6 @@ export class LoginComponent implements OnInit {
   getUsers() {
     this.usuariosService.getUsuarios().subscribe((users: UserLogin[]) => {
       this.users = users;
-      console.log('users', this.users);
     });
   }
 
@@ -49,6 +51,7 @@ export class LoginComponent implements OnInit {
           this.userNotFound = true;
         }
       });
+    console.log('test', this.formulario.value.email);
   }
 
   loadData() {

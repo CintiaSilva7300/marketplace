@@ -4,6 +4,8 @@
   <strong>Algo deu errado!</strong> Verifique se as credenciais estão corretas.
 </div>
 
+<!-- <p>{{formulario.value.email}}</p> -->
+
 <div class="container">
   <div class="loginText">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check"
@@ -19,10 +21,6 @@
   <p>Veja seus pedidos de forma fácil, compre mais <br>rápido e tenha uma experiência personalizada :)</p>
 
   <!-- <button (click)="loadData()">ss</button> -->
-
-<div *ngIf="getLocalhistorage">
-  <h1>{{ getLocalhistorage.name }}</h1>
-</div>
 
   <form class="form" [formGroup]="formulario" (submit)="login()">
     <div class="mb-2">

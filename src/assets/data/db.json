@@ -164,6 +164,16 @@
       "birthday": "1996-11-11",
       "cpf": "999.999.999.99",
       "telephone": "11 1111-1111"
+    },
+    {
+      "id": 10,
+      "name": "Ana",
+      "email": "ana@gmail.com",
+      "password": "123",
+      "genre": "Feminino",
+      "birthday": "0011-11-11",
+      "cpf": "999 9999 999 99",
+      "telephone": "999999999"
     }
   ]
 }

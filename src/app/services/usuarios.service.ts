@@ -21,10 +21,8 @@ export class UsuariosService {
   }
 
   getUsuariosId(id: any): Observable<any> {
-    let params = new HttpParams().set('id', id);
-    return this.httpClient.get<UserLogin[]>(this.url + '' + id, {
-      params: params,
-    });
+    new HttpParams().set('id', id);
+    return this.httpClient.get<UserLogin[]>(this.url);
   }
 
   getUserByEmailAndPassword(email: any, password: any): any {

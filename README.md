@@ -1,4 +1,11 @@
-# Americanas
+# MARKETPLACE
+
+<src src="./src/app/img/Capturar.PNG">
+<src src="./src/app/img/Capturarbuca.PNG">
+<src src="./src/app/img/Capturarcadastro.PNG">
+<src src="./src/app/img/Capturarcarrinho.PNG">
+<src src="./src/app/img/Capturarlogin.PNG">
+<src src="./src/app/img/Capturarpagamento.PNG">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
