@@ -1,7 +1,10 @@
-# MARKETPLACE
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
-
+# Marketplace
+ <src src="./src/app/img/Capturar.PNG">
+<src src="./src/app/img/Capturarbuca.PNG">
+<src src="./src/app/img/Capturarcadastro.PNG">
+<src src="./src/app/img/Capturarcarrinho.PNG">
+<src src="./src/app/img/Capturarlogin.PNG">
+<src src="./src/app/img/Capturarpagamento.PNG">
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
