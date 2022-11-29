@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css'],
 })
 export class TestComponent implements OnInit {
-  aparecer = true;
-  mais = 5;
+  aparecer: boolean = true;
 
   constructor() {}
 
