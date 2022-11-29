@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-8">
       <div class="container tabela" *ngFor="let produto of produtos">
-        <div class="row">
+        <div class="row" *ngIf="!excluitProdutos">
           <div class="card" style="width: 6rem;">
             <img class="card-img-top" [src]="produto.img" alt="Card image cap">
           </div>
@@ -22,18 +22,16 @@
             <div>
               <p><strong>valor: {{produto.valor}} R$</strong></p>
             </div>
-            <button type="button" class="btn btn-danger ">
-              <h1 class="mais">+</h1>
-            </button>
-            <button type="button" class="btn btn-danger">
-              <h1 class="menos">-</h1>
-            </button>
           </div>
         </div>
       </div>
     </div>
     <div class="col-3">
       <h1 class="text1">resumo do pedido</h1>
+
+      <button type="button" class="btn btn-danger" (click)="limparCarrinho()">
+        <h1 class="menos">limpar carrinho</h1>
+      </button>
       <hr>
       <div class="texto2">
         <p><strong> Subtotal ({{produtos.length}} produtos)</strong></p>
@@ -53,4 +51,3 @@
     </div>
   </div>
 </div>
-

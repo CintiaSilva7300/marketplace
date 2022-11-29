@@ -11,6 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarinhoComponent implements OnInit {
   // @Input() private soma!: string;
+  excluitProdutos: boolean = false;
 
   produtos!: Produto[];
   itemId: any;
@@ -73,5 +74,13 @@ export class CarinhoComponent implements OnInit {
   comprar() {
     alert('Continuar');
     this.router.navigate(['/comprar']);
+  }
+
+  limparCarrinho() {
+    const carrinhoLocalStorage = localStorage.clear();
+    console.log('0 - carrinhoLocalStorage', carrinhoLocalStorage);
+
+    this.excluitProdutos = true;
+    console.log('excluir', this.excluitProdutos);
   }
 }

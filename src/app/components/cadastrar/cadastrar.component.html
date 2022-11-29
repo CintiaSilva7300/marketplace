@@ -7,10 +7,9 @@
   <p class="Top">Veja seus pedidos de forma fácil, compre mais <br>rápido e tenha uma experiência personalizada '_'</p>
 
   <form class="form" [formGroup]="formulario" (ngSubmit)="registration()">
-    <div class="mb-2" >
+    <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">Nome completo:</label>
-      <input type="name" class="form-control" aria-describedby="text"
-      formControlName="name" ngModel>
+      <input type="name" class="form-control" aria-describedby="text" formControlName="name" ngModel>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">
@@ -26,28 +25,29 @@
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">CPF<p>necessário pra emissão das Notas Fiscais</p></label>
-      <input type="text" class="form-control"  formControlName="cpf" placeholder="___-___-___-__"  ngModel>
+      <input type="text" class="form-control" formControlName="cpf" placeholder="___-___-___-__" ngModel>
     </div>
 
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">
         Telefone: <p>caso a gente precise entrar em contato sobre seus pedidos</p></label>
-      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="telephone" placeholder="(__) _____ - ____"ngModel>
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="telephone"
+        placeholder="(__) _____ - ____" ngModel>
     </div>
 
     <div class="mb-2">
       <label for="exampleInputEmail1" class="form-label">e-mail: <p>Informe um e-mail válido. Você vai precisar ativar
           sua conta depois de criar seu cadastro</p></label>
-      <input type="email" class="form-control" aria-describedby="emailHelp"  formControlName="email" ngModel>
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email" ngModel>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">
         senha <p>precisa ter entre 6 e 20 caracteres</p></label>
-      <input type="password" class="form-control" id="exampleInputPassword1"  formControlName="password" ngModel>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" ngModel>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="sim" id="defaultCheck1" >
+      <input class="form-check-input" type="checkbox" value="sim" id="defaultCheck1">
       <label class="form-check-label" for="defaultCheck1">
         <h6>
           compartilhar meus dados com parceiros para ter<br> conteúdos personalizados, veja como funciona.</h6>

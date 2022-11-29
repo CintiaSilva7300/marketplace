@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { NgModel, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, ROUTES } from '@angular/router';
@@ -9,12 +9,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import {
-  NgbAlertModule,
-  NgbModule,
-  NgbPaginationModule,
-  NgbTooltipModule,
-} from '@ng-bootstrap/ng-bootstrap';
+// import {
+//   NgbAlertModule,
+//   NgbPaginationModule,
+//   NgbTooltipModule,
+//  } from '@ng-bootstrap/ng-bootstrap';
+
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CarinhoComponent } from './components/carinho/carinho.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ComprarComponent } from './components/comprar/comprar.component';
     CarinhoComponent,
     FooterComponent,
     ComprarComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,10 +43,6 @@ import { ComprarComponent } from './components/comprar/comprar.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    NgbModule,
-    NgbTooltipModule,
-    NgbPaginationModule,
-    NgbAlertModule,
     CommonModule,
     ReactiveFormsModule,
   ],

@@ -42,8 +42,8 @@
 
 .btn {
   margin: 10px;
-  height: 30px;
-  width: 30px;
+  /* height: 30px;
+  width: 30px; */
   font-weight: bolder;
   margin-left: 0px;
 }

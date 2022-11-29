@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'comprar',
     component: ComprarComponent,
+  },
+  {
+    path: 'test',
+    component: TestComponent,
   },
 
   {

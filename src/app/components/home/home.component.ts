@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
       localStorage.setItem('name', JSON.stringify(this.users));
       console.log('test test', localStorage);
     } else {
-      alert('localHistorage esta vazio');
+      // alert('localHistorage esta vazio');
     }
   }
 
@@ -95,7 +95,7 @@ export class HomeComponent implements OnInit {
       console.log('carrinho', this.itemId);
       return;
     } else {
-      alert('Algo deu errado no method saveStorage!');
+      // alert('Algo deu errado no method saveStorage!');
       localStorage.setItem('carrinho', this.itemId);
     }
   }
@@ -106,7 +106,7 @@ export class HomeComponent implements OnInit {
       localStorage.setItem('test', JSON.stringify(test));
       return console.log('test test', localStorage);
     } else {
-      alert('localHistorage esta vazio');
+      // alert('localHistorage esta vazio');
     }
   }
 }
