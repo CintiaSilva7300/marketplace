@@ -4,7 +4,7 @@ export interface UserCadastro {
   genre: string;
   birthday: string;
   cpf: string;
-  telephone: number;
+  telephone: string;
   email: string;
   password: string;
 }

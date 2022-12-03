@@ -43,7 +43,6 @@ h1 {
 
 .btn {
   text-decoration-color: none;
-  /* background-color: #e60014; */
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,27,27,1) 69%);
   color: white;
   font-weight:bold ;

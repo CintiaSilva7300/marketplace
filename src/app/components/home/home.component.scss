@@ -22,9 +22,6 @@ h2 {
   margin: 0px;
   height: 80px;
   background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(195, 27, 27, 1) 69%);
-  /* position: fixed;
-  top: 0; */
-  /* z-index: 9997; z-index: 9997; //sobrepondo todos os elemntos a baixo do header */
 }
 
 .logoHeader {
@@ -42,11 +39,10 @@ h2 {
 }
 
 .btn {
+  width: 110px;
   margin-left: 5px;
   background-color: #c31b1b;
 }
-
-/* testeeeeeeeeeeeeeeeee */
 
 body {
   min-height: 100vh;
@@ -55,7 +51,6 @@ body {
 }
 
 .container {
-
   margin-top: 50px;
 }
 
@@ -90,7 +85,6 @@ body {
 }
 
 .card__content h2 {
-  // margin-top: 20px;
   margin: .6rem auto;
   text-align: center;
 }
@@ -151,6 +145,15 @@ body {
   width: 40px;
   height: 40px;
   padding: 5px;
+}
+
+.nameUser {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  margin-top: 5px;
+  font-family: cursive;
+  margin-right: 10px;
 }
 
 @media screen and (max-width:800px) {

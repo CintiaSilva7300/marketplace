@@ -4,7 +4,7 @@ import { UsuariosService } from './../../services/usuarios.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Produto } from './../login/models/produto';
 import { ProdutoService } from './../../services/produto.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -14,12 +14,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   inputPesquisa: string = '';
 
-  users!: UserLogin[];
   produtos!: Produto[];
+  user: any;
   formulario: any;
   id: any;
   itemId: any;
-  userNotFound!: boolean;
+
+  aparecer: boolean = false;
 
   constructor(
     private produtoService: ProdutoService,
@@ -50,15 +51,13 @@ export class HomeComponent implements OnInit {
   }
 
   getUsuarios() {
-    // this.usuariosService.getUsuarios().subscribe((users: UserLogin[]) => {
-    //   this.users = users;
-    //   console.log('users', this.users);
-    // });
-
+    const user = localStorage.getItem('user');
     let test: any;
-    if (localStorage.length > 0) {
-      localStorage.setItem('name', JSON.stringify(this.users));
-      console.log('test test', localStorage);
+    if (user) {
+      this.user = JSON.parse(user);
+      console.log('----------------------- ');
+      console.log(this.user?.name);
+      console.log('----------------------- ');
     } else {
       // alert('localHistorage esta vazio');
     }
@@ -108,5 +107,9 @@ export class HomeComponent implements OnInit {
     } else {
       // alert('localHistorage esta vazio');
     }
+  }
+
+  aparecerMenu() {
+    this.aparecer = !this.aparecer;
   }
 }

@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
       )
       .subscribe((data: any) => {
         if (data.length > 0) {
-          localStorage.setItem('Localhistorage', JSON.stringify(data));
+          localStorage.setItem('user', JSON.stringify(data[0]));
           this.router.navigate(['/']);
         } else {
           this.userNotFound = true;
