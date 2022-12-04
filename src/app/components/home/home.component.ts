@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
 
   getUsuarios() {
     const user = localStorage.getItem('user');
-    let test: any;
+    // let test: any;
     if (user) {
       this.user = JSON.parse(user);
     }
