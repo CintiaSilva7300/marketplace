@@ -41,11 +41,9 @@ export class ComprarComponent implements OnInit {
 
     this.produtoService.getProdutos().subscribe((response: any) => {
       if (response.length > 0) {
-        // console.log('entrou');
         this.produtos = response.filter((item: any) =>
           idProdutoCarrinho.includes(item.id)
         );
-        console.log('ProdutoLocalHistorage', this.produtos);
       } else {
         alert('Algo deu errado');
       }
@@ -57,7 +55,6 @@ export class ComprarComponent implements OnInit {
     for (var i = 0; i < this.produtos.length; i++) {
       soma = soma + this.produtos[i].valor;
     }
-    console.log(soma);
     return soma;
   }
 }

@@ -174,6 +174,26 @@
       "birthday": "0011-11-11",
       "cpf": "999 9999 999 99",
       "telephone": "999999999"
+    },
+    {
+      "id": 11,
+      "name": "",
+      "email": "cintiasilva7300@gmail.com",
+      "password": "123456",
+      "genre": "",
+      "birthday": "",
+      "cpf": "",
+      "telephone": ""
+    },
+    {
+      "id": 12,
+      "name": "Cintia",
+      "email": "cintiasilva7300@gmail.com",
+      "password": "123456",
+      "genre": "Feminino",
+      "birthday": "1997-03-19",
+      "cpf": "00000000000",
+      "telephone": "11111111111"
     }
   ]
 }

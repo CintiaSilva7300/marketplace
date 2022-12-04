@@ -10,16 +10,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./carinho.component.css'],
 })
 export class CarinhoComponent implements OnInit {
-  // @Input() private soma!: string;
   excluitProdutos: boolean = false;
 
   produtos!: Produto[];
   itemId: any;
   formulario: any;
   carrinhoLista: any;
-  // somaValor: any;
-  // promocao = true;
-  resultado: any;
 
   constructor(private produtoService: ProdutoService, private router: Router) {
     this.getData();
@@ -38,25 +34,20 @@ export class CarinhoComponent implements OnInit {
   getData() {
     let idProdutoCarrinho: number[] = [];
     const carrinhoLocalStorage = localStorage.getItem('carrinho');
-    console.log('0 - carrinhoLocalStorage', carrinhoLocalStorage);
 
     if (carrinhoLocalStorage) {
       const carrinhoArrayString = carrinhoLocalStorage?.split(',') || [];
-      console.log('1 - carrinhoArrayString', carrinhoArrayString);
 
       idProdutoCarrinho = carrinhoArrayString.map((itemCarrinho) =>
         Number(itemCarrinho)
       );
-      console.log('2 - idProdutoCarrinho', idProdutoCarrinho);
     }
 
     this.produtoService.getProdutos().subscribe((response: any) => {
       if (response.length > 0) {
-        // console.log('entrou');
         this.produtos = response.filter((item: any) =>
           idProdutoCarrinho.includes(item.id)
         );
-        console.log('ProdutoLocalHistorage', this.produtos);
       } else {
         alert('Algo deu errado');
       }
@@ -77,10 +68,7 @@ export class CarinhoComponent implements OnInit {
   }
 
   limparCarrinho() {
-    const carrinhoLocalStorage = localStorage.clear();
-    console.log('0 - carrinhoLocalStorage', carrinhoLocalStorage);
-
+    localStorage.removeItem('carrinho');
     this.excluitProdutos = true;
-    console.log('excluir', this.excluitProdutos);
   }
 }

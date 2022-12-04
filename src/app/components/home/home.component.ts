@@ -1,6 +1,4 @@
 import { Router } from '@angular/router';
-import { UserLogin } from './../login/models/login';
-import { UsuariosService } from './../../services/usuarios.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Produto } from './../login/models/produto';
 import { ProdutoService } from './../../services/produto.service';
@@ -24,11 +22,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutoService,
-    private usuariosService: UsuariosService,
     private router: Router
-  ) {
-    this.getData();
-  }
+  ) {  }
 
   ngOnInit(): void {
     this.getProdutos();
@@ -46,7 +41,6 @@ export class HomeComponent implements OnInit {
   getProdutos() {
     this.produtoService.getProdutos().subscribe((produtos: Produto[]) => {
       this.produtos = produtos;
-      // console.log('p', this.produtos);
     });
   }
 
@@ -55,17 +49,11 @@ export class HomeComponent implements OnInit {
     let test: any;
     if (user) {
       this.user = JSON.parse(user);
-      console.log('----------------------- ');
-      console.log(this.user?.name);
-      console.log('----------------------- ');
-    } else {
-      // alert('localHistorage esta vazio');
     }
   }
 
   filtrarProduto() {
     if (this.inputPesquisa.length > 1) {
-      //filtrar apartir do segundo digito
       this.produtos = this.produtos.filter((search: any) =>
         search.name.toLowerCase().includes(this.inputPesquisa.toLowerCase())
       );
@@ -74,12 +62,10 @@ export class HomeComponent implements OnInit {
         this.produtos = pro;
       });
     }
-    console.log(this.inputPesquisa);
-    console.log(this.inputPesquisa.length);
   }
 
   logout() {
-    localStorage.clear();
+    localStorage.removeItem('user');
     this.router.navigate(['/login']);
   }
 
@@ -91,21 +77,10 @@ export class HomeComponent implements OnInit {
       carrinhoStorage = carrinhoStorage + ',' + this.itemId;
       localStorage.setItem('carrinho', carrinhoStorage);
       this.router.navigate(['carrinho']);
-      console.log('carrinho', this.itemId);
       return;
     } else {
       // alert('Algo deu errado no method saveStorage!');
       localStorage.setItem('carrinho', this.itemId);
-    }
-  }
-
-  getData() {
-    let test: any;
-    if (localStorage.length > 0) {
-      localStorage.setItem('test', JSON.stringify(test));
-      return console.log('test test', localStorage);
-    } else {
-      // alert('localHistorage esta vazio');
     }
   }
 

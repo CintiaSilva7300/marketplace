@@ -7,9 +7,10 @@
     <div class="rotasNav">
       <h1 class="nameUser">{{ user.name }}</h1>
       <div class="menu">
-        <button class="btn btn-danger" (click)="aparecerMenu()">Menu</button>
+        <button class="btn btn-danger" (click)="aparecerMenu()">Menu </button>
         <div *ngIf="aparecer">
           <ul>
+            <a class="btn btn-danger" routerLink="perfil">Perfil</a>
             <a class="btn btn-danger" routerLinkActive="router-link-active" (click)="logout()">sair</a>
           </ul>
         </div>

@@ -39,24 +39,22 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.usuariosService
-      .getUserByEmailAndPassword(
+      .login(
         this.formulario.value.email,
         this.formulario.value.password
       )
       .subscribe((data: any) => {
-        if (data.length > 0) {
-          localStorage.setItem('user', JSON.stringify(data[0]));
+        if (data) {
+          localStorage.setItem('user', JSON.stringify(data));
           this.router.navigate(['/']);
         } else {
           this.userNotFound = true;
         }
       });
-    console.log('test', this.formulario.value.email);
   }
 
   loadData() {
     let data: any = localStorage.getItem('getLocalhistorage');
     this.getLocalhistorage = JSON.parse(data);
-    console.log('testee1', this.getLocalhistorage);
   }
 }

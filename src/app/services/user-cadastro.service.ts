@@ -12,6 +12,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserCadastroService {
   url = 'http://localhost:3000/UsersCadastro';
+  urlApi = 'http://45.35.104.152:3000';
 
   constructor(private http: HttpClient) {}
 
@@ -27,6 +28,12 @@ export class UserCadastroService {
     return this.http
       .post<UserCadastro>(this.url, JSON.stringify(user), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
+  }
+
+  create(user: UserCadastro): Observable<UserCadastro> {
+    return this.http
+      .post<UserCadastro>(this.urlApi + "/users/", user)
+
   }
 
   handleError(error: HttpErrorResponse) {

@@ -8,6 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class UsuariosService {
   url = 'http://localhost:3000/UsersCadastro';
+  urlApi = 'http://45.35.104.152:3000';
 
   constructor(private httpClient: HttpClient) {}
   users!: any[];
@@ -25,9 +26,16 @@ export class UsuariosService {
     return this.httpClient.get<UserLogin[]>(this.url);
   }
 
-  getUserByEmailAndPassword(email: any, password: any): any {
-    return this.httpClient.get<any>(
-      this.url + '?email=' + email + '&password=' + password
+  // getUserByEmailAndPassword(email: any, password: any): any {
+  //   return this.httpClient.get<any>(
+  //     this.url + '?email=' + email + '&password=' + password
+  //   );
+  // }
+
+  login(email: any, password: any): any {
+    const data = {email, password}
+    return this.httpClient.post<any>(
+      this.urlApi + '/users/login', data
     );
   }
 }

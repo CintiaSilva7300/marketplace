@@ -11,7 +11,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CadastrarComponent implements OnInit {
   userCadastros!: UserCadastro[];
-
   formulario: any;
   user: any;
 
@@ -20,7 +19,6 @@ export class CadastrarComponent implements OnInit {
   ngOnInit(): void {
     this.userCadastros = [];
     this.formulario = new FormGroup({
-      id: new FormControl(),
       name: new FormControl(),
       email: new FormControl(),
       password: new FormControl(),
@@ -33,12 +31,12 @@ export class CadastrarComponent implements OnInit {
 
   registration(): void {
     this.userCadastroService
-      .saveUsers(this.formulario.value)
+      .create(this.formulario.value)
       .subscribe((user: any) => {
         this.user = user;
         this.formulario.reset();
         localStorage.setItem('user', JSON.stringify(user));
-        console.log('test', this.user);
       });
+
   }
 }

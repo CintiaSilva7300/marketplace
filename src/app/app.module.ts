@@ -23,6 +23,7 @@ import { CarinhoComponent } from './components/carinho/carinho.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
 import { TestComponent } from './test/test.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TestComponent } from './test/test.component';
     FooterComponent,
     ComprarComponent,
     TestComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
