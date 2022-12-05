@@ -48,14 +48,26 @@ nav {
 }
 
 .card {
+  text-align: start;
   height: 80px;
   margin: 5px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
 }
 
 .card_maior {
-  height: 200px;
+  height: 100%;
 }
 
 .navbar {
   z-index: 100;
+}
+
+.tituloUsuario {
+  font-weight: bold;
+  font-size: 12px;
 }

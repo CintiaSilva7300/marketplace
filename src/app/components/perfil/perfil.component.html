@@ -10,14 +10,17 @@
 <app-header></app-header>
 
 <div class="container">
-  <h2>Seu perfil {{user.name}}</h2>
+  <h5 class="tituloUsuario">Olá {{user.name}}</h5>
   <div class="row">
-    <div class="col-md-3" style="background-color: green;">
-      <div class="card">
-        <h1>test -1</h1>
-      </div>
+    <div class="col-md-3">
+      <a (click)="aparecerItem()">
+        <div class="card">
+          <h2><strong>cadastro</strong><br>
+            ver e alterar seus dados, seu e-mail e sua senha</h2>
+        </div>
+      </a>
 
-      <div class="card">
+      <!-- <div class="card">
         <h1>test -2</h1>
       </div>
 
@@ -31,18 +34,74 @@
 
       <div class="card">
         <h1>test -4</h1>
-      </div>
+      </div> -->
 
     </div>
-    <div class="col-6 col-md-9" style="background-color: red;">
+    <div class="col-6 col-md-9">
       <div class="card card_maior">
-        <h1>TESTE</h1>
-        <h1 style="font-size: 50px;">test -1</h1>
+        <div *ngIf="mostrarItem" style="display: flex; display:inline-block; margin: 10px;">
+          <!-- <p>name{{user.name}}</p>
+          <p>birthday{{user.birthday}}</p>
+          <p>cpf{{user.cpf}}</p>
+          <p>email{{user.email}}</p>
+          <p>genre{{user.genre}}</p>
+          <p>password{{user.password}}</p>
+          <p>telephone{{user.telephone}} testeee </p> -->
+
+          <form class="form">
+            <div class="mb-2">
+              <label class="form-label">primeiro nome:</label>
+              <input type="name" class="form-control" aria-describedby="text" formControlName="name"
+                value="{{user.name}}">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">
+                Gênero:<p>pra gente te conhecer um pouquinho melhor :)</p></label>
+              <input type="text" class="form-control" id="exampleInputPassword1" formControlName="genre"
+                value="{{user.genre}}">
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">
+                Data de nascimento:<p>
+                  necessário pra identificar a maioridade, no formato DD/MM/AAAA</p></label>
+              <input type="date" class="form-control" aria-describedby="text" formControlName="birthday"
+                value="{{user.birthday}}">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">CPF<p>necessário pra emissão das Notas Fiscais</p>
+              </label>
+              <input type="text" class="form-control" formControlName="cpf" placeholder="___-___-___-__"
+                value="{{user.cpf}}">
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">
+                Telefone: <p>caso a gente precise entrar em contato sobre seus pedidos</p></label>
+              <input type="text" class="form-control" aria-describedby="teleohoneHelp" formControlName="telephone"
+                placeholder="(__) _____ - ____" value="{{user.telephone}}">
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">e-mail:</label>
+              <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email"
+                value="{{user.email}}">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">
+                senha <p>precisa ter entre 6 e 20 caracteres</p></label>
+              <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
+                value="{{user.password}}">
+            </div>
+          </form>
+
+
+        </div>
       </div>
 
-      <div class="card card_maior">
+      <!-- <div class="card card_maior">
         <h1>TESTE</h1>
         <h1 style="font-size: 50px;">test -2</h1>
       </div>
+    </div> -->
     </div>
-  </div>

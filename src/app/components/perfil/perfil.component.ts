@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  user: any;
-  aparecer: boolean = false;
+  user: any | undefined;
+  mostrarItem: boolean = true;
+  formulario: any;
 
   constructor(private router: Router) {
 
@@ -16,6 +18,16 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsuarios();
+
+    this.formulario = new FormGroup({
+      name: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
+      genre: new FormControl(),
+      birthday: new FormControl(),
+      cpf: new FormControl(),
+      telephone: new FormControl(),
+    });
   }
 
   getUsuarios() {
@@ -31,9 +43,8 @@ export class PerfilComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  aparecerMenu() {
-    this.aparecer = !this.aparecer;
+  aparecerItem() {
+    this.mostrarItem = !this.mostrarItem;
   }
-
 
 }
