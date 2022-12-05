@@ -7,43 +7,7 @@
 <p>password{{user.password}}</p>
 <p>telephone{{user.telephone}} testeee </p> -->
 
-<nav class="navbar" style="display: flex; display: inline-flex">
-  <h2 class="Textmarketplace">
-    <a href="/" style="text-decoration: none; color: white">Marketplace</a>
-  </h2>
-  <div *ngIf="user; else elseBlock">
-    <div class="rotasNav">
-      <p class="nameUser">{{ user.name }}</p>
-      <div class="menu">
-        <button class="btn btn-danger" (click)="aparecerMenu()">Menu </button>
-        <div *ngIf="aparecer">
-          <ul>
-            <a class="btn btn-danger" routerLink="perfil">Perfil</a>
-            <a class="btn btn-danger" routerLinkActive="router-link-active" (click)="logout()">sair</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <ng-template #elseBlock>
-    <div class="rotasNav">
-      <div class="menu">
-        <button class="btn btn-danger" (click)="aparecerMenu()">Menu</button>
-        <div *ngIf="aparecer">
-          <ul>
-            <button class="btn btn-danger" [routerLink]="['/login']" routerLinkActive="router-link-active">
-              Entrar
-            </button>
-            <a class="btn btn-danger" [routerLink]="['/cadastrar']" routerLinkActive="router-link-active">Cadastrar</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</nav>
-
-
+<app-header></app-header>
 
 <div class="container">
   <h2>Seu perfil {{user.name}}</h2>

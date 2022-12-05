@@ -14,11 +14,39 @@ h2 {
   margin: 0px;
   height: 80px;
   /* background-color: #f80032; */
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,27,27,1) 69%);
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(195, 27, 27, 1) 69%);
 }
 
 .logoHeader {
   margin: 0px;
   padding: 0px;
   margin-left: 15px;
+}
+
+
+.navbar {
+  z-index: 100;
+}
+
+.btn {
+  width: 110px;
+  margin-left: 5px;
+  background-color: #c31b1b;
+}
+
+.nameUser {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  margin-top: 5px;
+  font-family: cursive;
+  margin-right: 10px;
+}
+
+.rotasNav {
+  display: flex;
+  text-decoration: none;
+  margin-right: 220px;
+  height: 30px;
+  width: 30px;
 }

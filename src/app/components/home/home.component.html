@@ -1,39 +1,4 @@
-<nav class="navbar" style="display: flex; display: inline-flex">
-  <h2 class="Textmarketplace">
-    <a href="/" style="text-decoration: none; color: white">Marketplace</a>
-  </h2>
-
-  <div *ngIf="user; else elseBlock">
-    <div class="rotasNav">
-      <h1 class="nameUser">{{ user.name }}</h1>
-      <div class="menu">
-        <button class="btn btn-danger" (click)="aparecerMenu()">Menu </button>
-        <div *ngIf="aparecer">
-          <ul>
-            <a class="btn btn-danger" routerLink="perfil">Perfil</a>
-            <a class="btn btn-danger" routerLinkActive="router-link-active" (click)="logout()">sair</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <ng-template #elseBlock>
-    <div class="rotasNav">
-      <div class="menu">
-        <button class="btn btn-danger" (click)="aparecerMenu()">Menu</button>
-        <div *ngIf="aparecer">
-          <ul>
-            <button class="btn btn-danger" [routerLink]="['/login']" routerLinkActive="router-link-active">
-              Entrar
-            </button>
-            <a class="btn btn-danger" [routerLink]="['/cadastrar']" routerLinkActive="router-link-active">Cadastrar</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</nav>
+<app-header></app-header>
 
 <div class="container_item col">
   <div class="input-group">
