@@ -61,6 +61,7 @@ nav {
 
 .card_maior {
   height: 100%;
+  padding: 10px;
 }
 
 .navbar {
@@ -70,4 +71,11 @@ nav {
 .tituloUsuario {
   font-weight: bold;
   font-size: 12px;
+}
+
+.titulo1 {
+  font-weight: bold;
+  font-size: 22px;
+  margin: 5px;
+  padding: 10px;
 }

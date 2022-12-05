@@ -40,14 +40,7 @@
     <div class="col-6 col-md-9">
       <div class="card card_maior">
         <div *ngIf="mostrarItem" style="display: flex; display:inline-block; margin: 10px;">
-          <!-- <p>name{{user.name}}</p>
-          <p>birthday{{user.birthday}}</p>
-          <p>cpf{{user.cpf}}</p>
-          <p>email{{user.email}}</p>
-          <p>genre{{user.genre}}</p>
-          <p>password{{user.password}}</p>
-          <p>telephone{{user.telephone}} testeee </p> -->
-
+          <h1 class="titulo1">Cadastro</h1>
           <form class="form">
             <div class="mb-2">
               <label class="form-label">primeiro nome:</label>
@@ -56,20 +49,19 @@
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">
-                Gênero:<p>pra gente te conhecer um pouquinho melhor :)</p></label>
+                Gênero:</label>
               <input type="text" class="form-control" id="exampleInputPassword1" formControlName="genre"
                 value="{{user.genre}}">
             </div>
 
             <div class="mb-2">
               <label class="form-label">
-                Data de nascimento:<p>
-                  necessário pra identificar a maioridade, no formato DD/MM/AAAA</p></label>
+                Data de nascimento: formato DD/MM/AAAA</label>
               <input type="date" class="form-control" aria-describedby="text" formControlName="birthday"
                 value="{{user.birthday}}">
             </div>
             <div class="mb-3">
-              <label class="form-label">CPF<p>necessário pra emissão das Notas Fiscais</p>
+              <label class="form-label">CPF:
               </label>
               <input type="text" class="form-control" formControlName="cpf" placeholder="___-___-___-__"
                 value="{{user.cpf}}">
@@ -77,19 +69,19 @@
 
             <div class="mb-2">
               <label class="form-label">
-                Telefone: <p>caso a gente precise entrar em contato sobre seus pedidos</p></label>
+                Telefone:</label>
               <input type="text" class="form-control" aria-describedby="teleohoneHelp" formControlName="telephone"
                 placeholder="(__) _____ - ____" value="{{user.telephone}}">
             </div>
 
             <div class="mb-2">
-              <label class="form-label">e-mail:</label>
+              <label class="form-label">E-mail:</label>
               <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email"
                 value="{{user.email}}">
             </div>
             <div class="mb-3">
               <label class="form-label">
-                senha <p>precisa ter entre 6 e 20 caracteres</p></label>
+                Senha:</label>
               <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
                 value="{{user.password}}">
             </div>
