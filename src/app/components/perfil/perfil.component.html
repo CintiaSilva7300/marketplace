@@ -1,8 +1,84 @@
-<app-header></app-header>
-<p>name{{user.name}}</p>
+<!-- <app-header></app-header> -->
+<!-- <p>name{{user.name}}</p>
 <p>birthday{{user.birthday}}</p>
 <p>cpf{{user.cpf}}</p>
 <p>email{{user.email}}</p>
 <p>genre{{user.genre}}</p>
 <p>password{{user.password}}</p>
-<p>telephone{{user.telephone}} testeee </p>
+<p>telephone{{user.telephone}} testeee </p> -->
+
+<nav class="navbar" style="display: flex; display: inline-flex">
+  <h2 class="Textmarketplace">
+    <a href="/" style="text-decoration: none; color: white">Marketplace</a>
+  </h2>
+  <div *ngIf="user; else elseBlock">
+    <div class="rotasNav">
+      <p class="nameUser">{{ user.name }}</p>
+      <div class="menu">
+        <button class="btn btn-danger" (click)="aparecerMenu()">Menu </button>
+        <div *ngIf="aparecer">
+          <ul>
+            <a class="btn btn-danger" routerLink="perfil">Perfil</a>
+            <a class="btn btn-danger" routerLinkActive="router-link-active" (click)="logout()">sair</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #elseBlock>
+    <div class="rotasNav">
+      <div class="menu">
+        <button class="btn btn-danger" (click)="aparecerMenu()">Menu</button>
+        <div *ngIf="aparecer">
+          <ul>
+            <button class="btn btn-danger" [routerLink]="['/login']" routerLinkActive="router-link-active">
+              Entrar
+            </button>
+            <a class="btn btn-danger" [routerLink]="['/cadastrar']" routerLinkActive="router-link-active">Cadastrar</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</nav>
+
+
+
+<div class="container">
+  <h2>Seu perfil {{user.name}}</h2>
+  <div class="row">
+    <div class="col-md-3" style="background-color: green;">
+      <div class="card">
+        <h1>test -1</h1>
+      </div>
+
+      <div class="card">
+        <h1>test -2</h1>
+      </div>
+
+      <div class="card">
+        <h1>test -2</h1>
+      </div>
+
+      <div class="card">
+        <h1>test -3</h1>
+      </div>
+
+      <div class="card">
+        <h1>test -4</h1>
+      </div>
+
+    </div>
+    <div class="col-6 col-md-9" style="background-color: red;">
+      <div class="card card_maior">
+        <h1>TESTE</h1>
+        <h1 style="font-size: 50px;">test -1</h1>
+      </div>
+
+      <div class="card card_maior">
+        <h1>TESTE</h1>
+        <h1 style="font-size: 50px;">test -2</h1>
+      </div>
+    </div>
+  </div>

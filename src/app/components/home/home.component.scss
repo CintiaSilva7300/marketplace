@@ -50,8 +50,9 @@ body {
   background-color: #222;
 }
 
-.container {
+.container_item {
   margin-top: 50px;
+  margin-left: 40px;
 }
 
 .card {
@@ -121,6 +122,7 @@ body {
   margin-top: -20px;
   box-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 .bi {
   margin-left: 10px;
 }

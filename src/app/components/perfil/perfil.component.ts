@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
   user: any;
+  aparecer: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) {
+
+   }
 
   ngOnInit(): void {
     this.getUsuarios();
@@ -21,4 +25,15 @@ export class PerfilComponent implements OnInit {
       this.user = JSON.parse(user);
     }
   }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
+  }
+
+  aparecerMenu() {
+    this.aparecer = !this.aparecer;
+  }
+
+
 }
