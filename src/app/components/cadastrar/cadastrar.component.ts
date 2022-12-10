@@ -4,6 +4,9 @@ import { Component, OnInit } from '@angular/core';
 import { Guid } from 'guid-typescript';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
@@ -37,6 +40,7 @@ export class CadastrarComponent implements OnInit {
         this.formulario.reset();
         localStorage.setItem('user', JSON.stringify(user));
       });
-
   }
+
+
 }

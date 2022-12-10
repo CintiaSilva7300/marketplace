@@ -9,11 +9,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-// import {
-//   NgbAlertModule,
-//   NgbPaginationModule,
-//   NgbTooltipModule,
-//  } from '@ng-bootstrap/ng-bootstrap';
 
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { HeaderComponent } from './components/header/header.component';

@@ -18,30 +18,32 @@
     </div>
 
     <div class="mb-2">
-      <label for="exampleInputEmail1" class="form-label">
+      <label for="birthday" class="form-label">
         Data de nascimento:<p>
           necessário pra identificar a maioridade, no formato DD/MM/AAAA</p></label>
-      <input type="date" class="form-control" aria-describedby="text" formControlName="birthday" ngModel>
+      <input type="text" class="form-control" placeholder="00/00/00" aria-describedby="text" formControlName="birthday"
+        ngModel>
     </div>
+
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">CPF<p>necessário pra emissão das Notas Fiscais</p></label>
+      <label for="cpf" class="form-label">CPF<p>necessário pra emissão das Notas Fiscais</p></label>
       <input type="text" class="form-control" formControlName="cpf" placeholder="___-___-___-__" ngModel>
     </div>
 
     <div class="mb-2">
-      <label for="exampleInputEmail1" class="form-label">
+      <label for="teleohoneHelp" class="form-label">
         Telefone: <p>caso a gente precise entrar em contato sobre seus pedidos</p></label>
       <input type="text" class="form-control" aria-describedby="teleohoneHelp" formControlName="telephone"
         placeholder="(__) _____ - ____" ngModel>
     </div>
 
     <div class="mb-2">
-      <label for="exampleInputEmail1" class="form-label">e-mail: <p>Informe um e-mail válido. Você vai precisar ativar
+      <label for="email" class="form-label">e-mail: <p>Informe um e-mail válido. Você vai precisar ativar
           sua conta depois de criar seu cadastro</p></label>
       <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email" ngModel>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">
+      <label for="password" class="form-label">
         senha <p>precisa ter entre 6 e 20 caracteres</p></label>
       <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" ngModel>
     </div>

@@ -1,5 +1,4 @@
 import { UsuariosService } from './../../services/usuarios.service';
-import { UserCadastroService } from './../../services/user-cadastro.service';
 import { Component, OnInit } from '@angular/core';
 import { UserLogin } from './models/login';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
