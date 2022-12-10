@@ -24,29 +24,29 @@ export class CarinhoComponent implements OnInit {
   ngOnInit(): void {
     this.produtos = [];
     this.formulario = new FormGroup({
-      id: new FormControl(),
+      _id: new FormControl(),
       name: new FormControl(),
       description: new FormControl(),
-      valor: new FormControl(),
+      price: new FormControl(),
     });
   }
 
   getData() {
-    let idProdutoCarrinho: number[] = [];
+    let idProdutoCarrinho: string[] = [];
     const carrinhoLocalStorage = localStorage.getItem('carrinho');
 
     if (carrinhoLocalStorage) {
       const carrinhoArrayString = carrinhoLocalStorage?.split(',') || [];
 
       idProdutoCarrinho = carrinhoArrayString.map((itemCarrinho) =>
-        Number(itemCarrinho)
+        (itemCarrinho)
       );
     }
 
     this.produtoService.getProdutos().subscribe((response: any) => {
       if (response.length > 0) {
         this.produtos = response.filter((item: any) =>
-          idProdutoCarrinho.includes(item.id)
+          idProdutoCarrinho.includes(item._id)
         );
       } else {
         alert('Algo deu errado');
@@ -57,7 +57,7 @@ export class CarinhoComponent implements OnInit {
   valorTotal(): any {
     var soma = 0;
     for (var i = 0; i < this.produtos.length; i++) {
-      soma = soma + this.produtos[i].valor;
+      soma = soma + this.produtos[i].price;
     }
     return soma;
   }

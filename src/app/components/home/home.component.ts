@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
       id: new FormControl(),
       name: new FormControl(),
       description: new FormControl(),
-      valor: new FormControl(),
+      price: new FormControl(),
     });
   }
 

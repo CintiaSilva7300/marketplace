@@ -13,10 +13,6 @@ export class UsuariosService {
   constructor(private httpClient: HttpClient) {}
   users!: any[];
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  };
-
   getUsuarios(): Observable<UserLogin[]> {
     return this.httpClient.get<UserLogin[]>(this.url);
   }

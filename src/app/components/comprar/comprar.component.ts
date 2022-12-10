@@ -23,7 +23,7 @@ export class ComprarComponent implements OnInit {
       id: new FormControl(),
       name: new FormControl(),
       description: new FormControl(),
-      valor: new FormControl(),
+      price: new FormControl(),
     });
   }
 
@@ -42,7 +42,7 @@ export class ComprarComponent implements OnInit {
     this.produtoService.getProdutos().subscribe((response: any) => {
       if (response.length > 0) {
         this.produtos = response.filter((item: any) =>
-          idProdutoCarrinho.includes(item.id)
+          idProdutoCarrinho.includes(item._id)
         );
       } else {
         alert('Algo deu errado');
@@ -53,7 +53,7 @@ export class ComprarComponent implements OnInit {
   valorTotal(): any {
     var soma = 0;
     for (var i = 0; i < this.produtos.length; i++) {
-      soma = soma + this.produtos[i].valor;
+      soma = soma + this.produtos[i].price;
     }
     return soma;
   }

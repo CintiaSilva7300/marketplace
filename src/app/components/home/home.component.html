@@ -13,9 +13,9 @@
       <h4>{{ produto.name }}</h4>
       <p>{{ produto.description }}</p>
       <p>
-        <strong> Valor: {{ produto.valor }} R$</strong>
+        <strong> Valor: {{ produto.price }} R$</strong>
       </p>
-      <button type="submit" routerLink="/carinho/{{ produto.id }}" (click)="saveStorage(produto.id)">
+      <button type="submit" routerLink="/carinho/{{ produto._id }}" (click)="saveStorage(produto._id)">
         <h5>Adicionar Carinho</h5>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" fill="currentColor" class="bi bi-cart-check-fill"
           viewBox="0 0 16 16">
